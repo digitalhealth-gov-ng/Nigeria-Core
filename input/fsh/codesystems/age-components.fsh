@@ -2,13 +2,13 @@ CodeSystem: NgAgeComponentCodesCS
 Id: age-component-codes
 Title: "NG Age Component Codes"
 Description: "Local CodeSystem for age components: units, comparison operators, and common MNCH/EPI age bands for use in measures, decision logic, and stratification."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/age-component-codes"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/age-component-codes"
 * ^status = #active
 * ^version = "0.1.0"
 * ^caseSensitive = true
 * ^content = #complete
 * ^experimental = false
-* ^publisher = "FMoHSW / DHIN 2025 Connectathon"
+* ^publisher = "FMoHSW"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 
 // -------------------- Units --------------------
