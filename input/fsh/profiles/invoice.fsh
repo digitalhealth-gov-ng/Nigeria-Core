@@ -5,9 +5,9 @@ Profile: NgInvoice
 Parent: Invoice
 Id: ng-invoice
 Title: "NG Invoice"
-Description: "Lightweight Invoice profile for pharmacy dispensing and payment in DHIN 2025 Connectathon."
+Description: "Lightweight Invoice profile for pharmacy dispensing and payment in Nigeria Core."
 
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-invoice"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-invoice"
 
 // Keep it simple to minimize QA
 * status 1..1 MS
