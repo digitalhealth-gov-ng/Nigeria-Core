@@ -2,8 +2,8 @@ Profile: NgServiceRequest
 Parent: ServiceRequest
 Title: "NG ServiceRequest"
 Id: ng-service-request
-Description: "Minimal ServiceRequest profile for the 2025 Connectathon (referrals and orders)."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-service-request"
+Description: "Minimal ServiceRequest profile for the Nigeria Core (referrals and orders)."
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-service-request"
 // Core, practical constraints
 * status 1..1 MS
 * status from http://hl7.org/fhir/ValueSet/request-status (required)
