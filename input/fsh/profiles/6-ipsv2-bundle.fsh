@@ -7,14 +7,14 @@ Id: ng-ips-document-bundle
 Title: "6-NG IPS Document Bundle"
 Description: """
 A document Bundle wrapping an NG IPS Composition and its referenced resources
-for use in the DHIN 2025 Connectathon. The first entry is the IPS Composition,
+for use in the Nigeria Core. The first entry is the IPS Composition,
 and subsequent entries carry the Patient, Conditions, Medications, Immunizations,
 Procedures, Results, Devices, and CarePlan referenced by the Composition.
 """
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-ips-document-bundle"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-ips-document-bundle"
 * ^version = "1.0.0"
 * ^status = #active
-* ^publisher = "DHIN 2025 Connectathon"
+* ^publisher = "NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 * ^experimental = false
 
@@ -148,7 +148,7 @@ Usage: #example
 
 * type = #document
 * timestamp = "2025-10-25T10:00:00+01:00"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-bundle-identifier-cs"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-bundle-identifier-cs"
 * identifier.value = "IPS-BND-0001"
 
 // ---------------------------------------------------------------------------
