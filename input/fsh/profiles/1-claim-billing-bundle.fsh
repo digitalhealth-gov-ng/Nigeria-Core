@@ -158,8 +158,8 @@ Usage: #inline
 Title: "Claim Patient - Amaka Nwosu"
 * meta.lastUpdated = "2025-10-25T14:30:00+01:00"
 * identifier[PhoneNumber].value = "08045678901"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 * name.given[0] = "Amaka"
@@ -177,7 +177,7 @@ Instance: NgPractitioner-Claim-001
 InstanceOf: NgPractitioner
 Usage: #inline
 Title: "Attending Physician - Dr. Emeka Obi"
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value = "MDCN-67890"
 * active = true
 * name.given = "Emeka"
@@ -191,7 +191,7 @@ Instance: NgOrganization-Provider-Claim-001
 InstanceOf: NgProviderOrganization
 Usage: #inline
 Title: "Rivers State Teaching Hospital"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "HCF-RS-5678"
 * active = true
 * name = "Rivers State Teaching Hospital"
@@ -204,7 +204,7 @@ Title: "Rivers State Teaching Hospital"
 * address.city = "Port Harcourt"
 * address.district = "ri-oyigbo"
 * address.state = "RI"
-* extension[NGOrganizationOwner].valueCodeableConcept.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-location-owner-cs"
+* extension[NGOrganizationOwner].valueCodeableConcept.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-location-owner-cs"
 * extension[NGOrganizationOwner].valueCodeableConcept.coding.code = #public
 
 // -------------------- NgOrganization (Insurer) -----------------
@@ -212,7 +212,7 @@ Instance: NgOrganization-Insurer-Claim-001
 InstanceOf: NgInsurerOrganization
 Usage: #inline
 Title: "MediCare Plus HMO"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "HMO-MC-9988"
 * active = true
 * name = "MediCare Plus HMO"
