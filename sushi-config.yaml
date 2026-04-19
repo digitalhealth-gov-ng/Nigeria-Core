@@ -3,7 +3,7 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: org.dhin-hie.sandbox ng.gov.digitalhealth.fhir-ig
+id: ng.gov.digitalhealth.fhir-ig
 canonical: https://fhir-ig.digitalhealth.gov.ng
 name: Nigeria Core
 title: Nigeria Core - FHIR Implementation Guide 
