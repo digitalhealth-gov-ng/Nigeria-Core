@@ -3,7 +3,7 @@ Parent: Observation
 Title: "NG Observations"
 Id: ng-observation
 Description: "A composite Observation profile capturing state of health, underlying conditions, HIV status, ages in weeks/months/years during client registration."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-observation"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-observation"
 * status 1..1
 * status = #final
 * category 1..1
@@ -89,11 +89,11 @@ Description: "Pregnancy & HIV status with age in years for NgPatient-001."
 * component[ageInYears].valueQuantity.system = "http://unitsofmeasure.org"
 * component[ageInYears].valueQuantity.unit = "year"
 
-* component[pregnancyStatus].valueCodeableConcept.coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-pregnancy-status"
+* component[pregnancyStatus].valueCodeableConcept.coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-pregnancy-status"
 * component[pregnancyStatus].valueCodeableConcept.coding[0].code = #pregnant
 * component[pregnancyStatus].valueCodeableConcept.coding[0].display = "Pregnant"
 
-* component[hivStatus].valueCodeableConcept.coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-hiv-status"
+* component[hivStatus].valueCodeableConcept.coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-hiv-status"
 * component[hivStatus].valueCodeableConcept.coding[0].code = #unknown
 * component[hivStatus].valueCodeableConcept.coding[0].display = "Unknown"
 
@@ -118,7 +118,7 @@ Description: "HIV status with age in years for NgPatient-002."
 //* component[ageInYears].valueQuantity.code = #yr
 * component[ageInYears].valueQuantity.unit = "year"
 
-* component[hivStatus].valueCodeableConcept.coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-hiv-status"
+* component[hivStatus].valueCodeableConcept.coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-hiv-status"
 * component[hivStatus].valueCodeableConcept.coding[0].code = #negative
 * component[hivStatus].valueCodeableConcept.coding[0].display = "Negative"
 
