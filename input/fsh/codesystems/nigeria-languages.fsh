@@ -2,7 +2,7 @@ CodeSystem: NGLanguagesCS
 Id: nigeria-languages
 Title: "NG Languages in Nigeria CS"
 Description: "This CodeSystem defines codes for major languages spoken across Nigeria."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-languages"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-languages"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
