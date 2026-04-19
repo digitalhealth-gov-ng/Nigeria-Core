@@ -10,7 +10,7 @@ Transaction bundle for MNCH referrals between facilities and/or payers.
 MUST contain a Patient and a ServiceRequest (the referral order).
 Optional entries (Communication, Task, etc.) may support initiation, response, and tracking.
 """
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-mnch-referral-bundle"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-mnch-referral-bundle"
 * ^version = "1.0.1"
 * ^status = #active
 * ^date = "2025-11-19"
@@ -67,7 +67,7 @@ Usage: #example
 Title: "MNCH Referral — Initiation (High BP, ?Preeclampsia)"
 Description: "Nkwo PHC refers Ada to NAUTH (urgent ANC specialist review)."
 * type = #transaction
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-bundle-identifier-cs"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-bundle-identifier-cs"
 * identifier.value = "BND-REF-0001"
 * timestamp = "2025-10-16T08:30:00+01:00"
 
@@ -113,7 +113,7 @@ Usage: #example
 Title: "MNCH Referral — Response (Acceptance by NAUTH)"
 Description: "Receiving specialist accepts referral; bed reserved, triage notified."
 * type = #transaction
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-bundle-identifier-cs"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-bundle-identifier-cs"
 * identifier.value = "BND-REF-0002"
 * timestamp = "2025-10-16T09:05:00+01:00"
 
@@ -159,7 +159,7 @@ Usage: #example
 Title: "MNCH Referral — Tracking (In Progress, MgSO₄ started)"
 Description: "Arrival at NAUTH; treatment initiated; ongoing monitoring."
 * type = #transaction
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-bundle-identifier-cs"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-bundle-identifier-cs"
 * identifier.value = "BND-REF-0003"
 * timestamp = "2025-10-16T14:40:00+01:00"
 
@@ -193,7 +193,7 @@ Usage: #example
 Title: "MNCH Referral — Completed (Stabilized) + Feedback"
 Description: "Stabilized after 6 hrs; plan for observation and PHC follow-up."
 * type = #transaction
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-bundle-identifier-cs"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-bundle-identifier-cs"
 * identifier.value = "BND-REF-0004"
 * timestamp = "2025-10-17T02:30:00+01:00"
 
@@ -248,8 +248,8 @@ Title: "Patient — Ada (High-risk pregnancy)"
 * birthDate = "1997-03-02"
 * meta.lastUpdated = "2023-10-28T08:00:00+01:00"
 * identifier[PhoneNumber].value = "08067467012"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 
