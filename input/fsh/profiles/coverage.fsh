@@ -3,7 +3,7 @@ Parent: Coverage
 Id: ng-coverage
 Title: "NG Claim Coverage"
 Description: "A profile capturing a patient's insurance coverage details."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-coverage"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-coverage"
 
 * status from http://hl7.org/fhir/ValueSet/fm-status
 * identifier 0..* MS
