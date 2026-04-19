@@ -1,9 +1,9 @@
 Profile: NgPatient
 Parent: Patient
 Title: "NG Patient"
-Description: "Nigeria 2025 Connectathon Patient Profile"
+Description: "Nigeria Core Patient Profile"
 Id: ng-patient
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-patient"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-patient"
 
 * meta.lastUpdated 1..1 MS
 * meta.lastUpdated ^short = "The date and time when the client record was created or last updated."
@@ -28,10 +28,10 @@ Id: ng-patient
 // STEP 3: Add constraints to the slice
 * identifier[NationalIDNo].value 1..1
 * identifier[NationalIDNo].value ^short = "The NIN number of the client which is a unique 11 digit number"
-* identifier[NationalIDNo].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[NationalIDNo].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[NationalIDNo].system ^short = "NIMC's identifier in the system autheticated to https://nimc.org/nin"
 * identifier[NationalIDNo].type from NGIdentifierVS
-* identifier[NationalIDNo].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[NationalIDNo].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[NationalIDNo].type.coding.code = #NIN
 * identifier[NationalIDNo].type.coding.display = "National Identity Number of Client or Caregiver"
 
@@ -45,9 +45,9 @@ Id: ng-patient
 * identifier[MedicalRecordsNumber].system ^short = "The institution issuing the MRN number (e.g., Asokoro Hospital) validated at http://asokoro.org/medicalrecord-no"
 * identifier[MedicalRecordsNumber].system ^definition = "The URI system that identifies the assigning authority for the medical record number."
 * identifier[MedicalRecordsNumber].system ^example[0].label = "Example MRN system"
-* identifier[MedicalRecordsNumber].system ^example[0].valueUri = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[MedicalRecordsNumber].system ^example[0].valueUri = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[MedicalRecordsNumber].type from NGIdentifierVS
-* identifier[MedicalRecordsNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[MedicalRecordsNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[MedicalRecordsNumber].type.coding.code = #MRN
 * identifier[MedicalRecordsNumber].type.coding.display = "Medical Record Number"
 
@@ -57,9 +57,9 @@ Id: ng-patient
 * identifier[BirthCertificateNo].system ^short = "The institution generating the birth certificate number (e.g., NPC)"
 * identifier[BirthCertificateNo].system ^definition = "The URI system identifying the authority that assigns the birth certificate number validated at http://npc.gov.ng/birthCertificate-no."
 * identifier[BirthCertificateNo].system ^example[0].label = "Example Birth Certificate number system"
-* identifier[BirthCertificateNo].system ^example[0].valueUri = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[BirthCertificateNo].system ^example[0].valueUri = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[BirthCertificateNo].type from NGIdentifierVS
-* identifier[BirthCertificateNo].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[BirthCertificateNo].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[BirthCertificateNo].type.coding.code = #BIRTHCERT
 * identifier[BirthCertificateNo].type.coding.display = "Birth Certificate Number"
 
@@ -70,9 +70,9 @@ Id: ng-patient
 * identifier[PhoneNumber].system ^short = "The provider of the phone number (e.g., MTN)"
 * identifier[PhoneNumber].system ^definition = "The URI system identifying the provider of the phone number validated at http://mtnonline.com/phone-no."
 * identifier[PhoneNumber].system ^example[0].label = "Example Phone Number system"
-* identifier[PhoneNumber].system ^example[0].valueUri = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system ^example[0].valueUri = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type from NGIdentifierVS
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 
@@ -83,9 +83,9 @@ Id: ng-patient
 * identifier[InsuranceNumber].system ^short = "The generating institution e.g., State, NHIA, or HMO"
 * identifier[InsuranceNumber].system ^definition = "The URI system identifying the provider of the insurance number validated at http://nhia.gov.ng/insurance-no."
 * identifier[InsuranceNumber].system ^example[0].label = "Example Insurance system"
-* identifier[InsuranceNumber].system ^example[0].valueUri = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[InsuranceNumber].system ^example[0].valueUri = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[InsuranceNumber].type from NGIdentifierVS
-* identifier[InsuranceNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[InsuranceNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[InsuranceNumber].type.coding.code = #INSUR
 * identifier[InsuranceNumber].type.coding.display = "The Insurance or HMO number of the client"
 
@@ -97,9 +97,9 @@ Id: ng-patient
 * identifier[Pseudonym].system ^short = "The generating institution e.g., NIMC"
 * identifier[Pseudonym].system ^definition = "The URI system identifying the provider of the pseudo number."
 * identifier[Pseudonym].system ^example[0].label = "Pseudonymized Patient Identifier system"
-* identifier[Pseudonym].system ^example[0].valueUri = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[Pseudonym].system ^example[0].valueUri = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[Pseudonym].type from NGIdentifierVS
-* identifier[Pseudonym].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[Pseudonym].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[Pseudonym].type.coding.code = #PSEUDONYM
 * identifier[Pseudonym].type.coding.display = "Pseudonymized Identifier"
 
@@ -194,16 +194,16 @@ Description: "Adult female referred for ANC; Lagos State, Ikeja LGA."
 * id = "00114455-e5f6-4789-a123-456789abcdef"
 
 // Identifiers (sliced)
-* identifier[NationalIDNo].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[NationalIDNo].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[NationalIDNo].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[NationalIDNo].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[NationalIDNo].type.coding.code = #NIN
 * identifier[NationalIDNo].value = "23456789012"
-* identifier[MedicalRecordsNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[MedicalRecordsNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[MedicalRecordsNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[MedicalRecordsNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[MedicalRecordsNumber].type.coding.code = #MRN
 * identifier[MedicalRecordsNumber].value = "ASO-2025-0098"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].value = "08051234567"
 // Demographics
@@ -237,20 +237,20 @@ Title: "Example Ng Patient (ePharmacy & Claims)"
 Description: "Adult male on chronic meds; insured with NHIA; Kano Municipal LGA."
 * meta.lastUpdated = 2025-11-04T09:10:00Z
 // Identifiers (sliced)
-* identifier[NationalIDNo].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[NationalIDNo].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[NationalIDNo].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[NationalIDNo].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[NationalIDNo].type.coding.code = #NIN
 * identifier[NationalIDNo].value = "12345678901"
-* identifier[MedicalRecordsNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[MedicalRecordsNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[MedicalRecordsNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[MedicalRecordsNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[MedicalRecordsNumber].type.coding.code = #MRN
 * identifier[MedicalRecordsNumber].value = "KNH-2025-33445"
-* identifier[InsuranceNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[InsuranceNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[InsuranceNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[InsuranceNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[InsuranceNumber].type.coding.code = #INSUR
 * identifier[InsuranceNumber].value = "NHIA-0011223344"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].value = "08031234567"
 // Demographics
@@ -284,12 +284,12 @@ Title: "Example Ng Patient (Immunization)"
 Description: "Male child presenting for routine vaccination; FCT AMAC."
 * meta.lastUpdated = 2025-11-04T11:45:00Z
 // Identifiers (sliced)
-* identifier[BirthCertificateNo].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[BirthCertificateNo].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[BirthCertificateNo].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[BirthCertificateNo].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[BirthCertificateNo].type.coding.code = #BIRTHCERT
 * identifier[BirthCertificateNo].value = "NPC-FCT-2019-004321"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].value = "08123456789"
 // Demographics
@@ -336,8 +336,8 @@ Description: "NIS ISO/TR 25237-compliant pseudonymized equivalent of NgPatient-0
 * meta.lastUpdated = 2025-11-04T08:30:00Z
 
 // --- Single replacement identifier (stable pseudonym) ---
-* identifier[Pseudonym].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[Pseudonym].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[Pseudonym].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[Pseudonym].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[Pseudonym].type.coding.code = #PSEUDONYM
 * identifier[Pseudonym].type.coding.display = "Pseudonymized Identifier"
 * identifier[Pseudonym].value = "PSN-8A7F-2C19-KE95"   // example token; linkage managed off-platform
