@@ -2,13 +2,13 @@ CodeSystem: NgATCLocalMedicationCS
 Id: ng-atc-medication-cs
 Title: "NG Local ATC Medication Codes"
 Description: "Local, ATC-inspired medication codes for MNCH referral, claims, prescription, and immunization use cases at the DHIN 2025 Connectathon. Codes are placeholders aligned to common maternal, newborn, and child health needs, plus EPI vaccines."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-atc-medication-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-atc-medication-cs"
 * ^status = #active
 * ^version = "0.1.0"
 * ^caseSensitive = true
 * ^content = #complete
 * ^experimental = false
-* ^publisher = "FMoHSW / DHIN 2025 Connectathon"
+* ^publisher = "FMoHSW / NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 
 // ---------- Maternal supplements / antianemics (A, B) ----------
