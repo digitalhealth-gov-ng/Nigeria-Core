@@ -3,7 +3,7 @@ Parent: Claim
 Id: ng-claim
 Title: "NG Claim"
 Description: "A profile representing submitted claims from providers to payers."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-claim"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-claim"
 
 * identifier 0..*
 * identifier ^short = "Business Identifier for claim"
@@ -55,7 +55,7 @@ Description: "Pharmacy claim submitted by Kano Central Hospital Pharmacy for NgP
 * provider = Reference(NgOrganization-001)
 
 // Optional business identifier
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier[0].value  = #CLM-2025-0001
 
 // Payee (provider is the pharmacist)
@@ -81,7 +81,7 @@ Description: "Pharmacy claim submitted by Kano Central Hospital Pharmacy for NgP
 
 // Insurance
 * insurance[0].focal = true
-* insurance[0].identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* insurance[0].identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * insurance[0].identifier.value  = #NHIA-0011223344
 * insurance[0].coverage = Reference(NgCoverage-001)
 * insurance[0].preAuthRef[0] = "PA-2025-ABC123"
