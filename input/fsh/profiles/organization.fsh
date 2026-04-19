@@ -3,7 +3,7 @@ Parent: Organization
 Id: ng-organization 
 Title: "NG Organization"
 Description: "An organization profile representing healthcare facilities responsible for health services or other types of organizations."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-organization"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-organization"
 
 
 * identifier 1..* MS
@@ -60,11 +60,11 @@ Title: "Example Asokoro District Hospital"
 Description: "Public secondary hospital in FCT (AMAC)."
 
 * id = "00134455-e5f6-4789-a123-456789abcdef"
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier[0].value = #HOSPITAL1234
 * active = true
 * name = "Asokoro District Hospital"
-* type[0].coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-type"
+* type[0].coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-type"
 * type[0].coding.code = #hospital
 * type[0].coding.display = "Secondary Hospital"
 * type[0].text = "Secondary Hospital"
@@ -76,7 +76,7 @@ Description: "Public secondary hospital in FCT (AMAC)."
 * address[0].city = "Abuja"
 * address[0].district = #fc-municipal
 * address[0].state = #FC
-* extension[NGOrganizationOwner].valueCodeableConcept.coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-location-owner-cs"
+* extension[NGOrganizationOwner].valueCodeableConcept.coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-location-owner-cs"
 * extension[NGOrganizationOwner].valueCodeableConcept.coding[0].code = #public
 * extension[NGOrganizationOwner].valueCodeableConcept.coding[0].display = "Public Health Institution Location"
 
@@ -89,11 +89,11 @@ InstanceOf: NgOrganization
 Usage: #example
 Title: "Example Kano Central Hospital Pharmacy"
 Description: "Pharmacy department serving outpatient dispensing; Kano Municipal."
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier[0].value = #HCF-12347
 * active = true
 * name = "Kano Central Hospital Pharmacy"
-* type[0].coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-type"
+* type[0].coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-type"
 * type[0].coding.code = #hospital
 * type[0].coding.display = "Secondary Hospital"
 * type[0].text = "Hospital Department"
@@ -105,7 +105,7 @@ Description: "Pharmacy department serving outpatient dispensing; Kano Municipal.
 * address[0].city = "Kabo"
 * address[0].district = #kn-kabo
 * address[0].state = #KN
-* extension[NGOrganizationOwner].valueCodeableConcept.coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-location-owner-cs"
+* extension[NGOrganizationOwner].valueCodeableConcept.coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-location-owner-cs"
 * extension[NGOrganizationOwner].valueCodeableConcept.coding[0].code = #private
 * extension[NGOrganizationOwner].valueCodeableConcept.coding[0].display = "Private Health Institution Location"
 
@@ -118,11 +118,11 @@ InstanceOf: NgOrganization
 Usage: #example
 Title: "Example Gwagwalada Model PHC"
 Description: "Public PHC facility in FCT Gwagwalada Area Council."
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier[0].value = #CLM-2025-0001
 * active = true
 * name = "Gwagwalada Model PHC"
-* type[0].coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-type"
+* type[0].coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-type"
 * type[0].coding.code = #phc-center-l2
 * type[0].coding.display = "PHC Center Level 2"
 * type[0].text = "Primary Health Care Centre (Level 2)"
@@ -132,7 +132,7 @@ Description: "Public PHC facility in FCT Gwagwalada Area Council."
 * address[0].city = "Gwagwalada"
 * address[0].district = #fc-gwagwalada
 * address[0].state = #FC
-* extension[NGOrganizationOwner].valueCodeableConcept.coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-location-owner-cs"
+* extension[NGOrganizationOwner].valueCodeableConcept.coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-location-owner-cs"
 * extension[NGOrganizationOwner].valueCodeableConcept.coding[0].code = #public
 * extension[NGOrganizationOwner].valueCodeableConcept.coding[0].display = "Public Health Institution Location"
 
@@ -149,7 +149,7 @@ Parent: NgOrganization
 Id: ng-provider-organization
 Title: "NG Provider Organization"
 Description: "Organization profile for healthcare providers (hospitals, clinics)"
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-provider-organization"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-provider-organization"
 * type 1..* MS
 * type from NgProviderOrgTypeVS (required)
 
@@ -158,7 +158,7 @@ Parent: NgOrganization
 Id: ng-insurer-organization
 Title: "NG Insurer Organization"
 Description: "Organization profile for insurance payers/HMOs"
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-insurer-organization"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-insurer-organization"
 * type 1..* MS
 * type from NgInsurerOrgTypeVS (required)
 
@@ -168,6 +168,6 @@ Parent: NgOrganization
 Id: ng-pharmacy-organization
 Title: "NG Pharmacy Organization"
 Description: "Organization profile for pharmacies and dispensing facilities"
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-pharmacy-organization"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-pharmacy-organization"
 * type 1..* MS
 * type from NgPharmacyOrganizationVS (required)
