@@ -2,8 +2,8 @@ Profile: NgDevice
 Parent: Device
 Title: "NG Device"
 Id: ng-device
-Description: "Minimal Device profile for the 2025 Connectathon (medical devices communications)."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-device"
+Description: "Minimal Device profile for Nigeria Core (medical devices communications)."
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-device"
 
 // Core elements (minimal & useful)
 * status 1..1 MS
@@ -39,7 +39,7 @@ Description: "An example Device."
 * id = "00124456-e5f6-4789-a123-456789abcdef"
 * status = #active
 * type.text = "Pulse oximeter"
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/ValueSet/nigeria-device-identifier-vs"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/ValueSet/nigeria-device-identifier-vs"
 * identifier[0].value = #VS-002
 * serialNumber = "SN-12345"
 * manufacturer = "Acme Medtech"
