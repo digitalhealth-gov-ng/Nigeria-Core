@@ -3,7 +3,7 @@ Parent: CoverageEligibilityRequest
 Id: ng-coverage-eligibility-request
 Title: "NG Claim Coverage Eligibility Request"
 Description: "A profile verifying a patient's active insurance coverage and covered services.."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-coverage-eligibility-request"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-coverage-eligibility-request"
 
 * identifier 0..* MS
 * status 1..1 MS
@@ -39,7 +39,7 @@ before emergency treatment for ankle injury. The system checks active policy
 and outpatient benefits in 3 seconds.
 """
 
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/eligibility-request-id"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/eligibility-request-id"
 * identifier[0].value = "ELAPPROVE01"
 * status = #active
 * purpose[0] = #validation
@@ -60,9 +60,9 @@ Usage: #example
 Title: "Patient - Chika Okafor"
 Description: "Patient with Emergency situation (Welding Supervisor)"
 * meta.lastUpdated = "2025-11-06T23:47:00+01:00"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].value = "08045678901"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 * name.given[0] = "Chika"
@@ -82,7 +82,7 @@ InstanceOf: NgProviderOrganization
 Usage: #example
 Title: "Service Hospital"
 Description: "Port Harcourt Emergency Hospital."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "HCF-RI-0045"
 * active = true
 * name = "Port Harcourt Emergency Hospital"
@@ -95,7 +95,7 @@ Description: "Port Harcourt Emergency Hospital."
 * address.city = "Port Harcourt"
 * address.district = "ri-emohua"
 * address.state = "RI"
-* extension[NGOrganizationOwner].valueCodeableConcept.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-location-owner-cs"
+* extension[NGOrganizationOwner].valueCodeableConcept.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-location-owner-cs"
 * extension[NGOrganizationOwner].valueCodeableConcept.coding.code = #faith-based
 
 // -------------------- Organization: Truth HMO --------------------
@@ -104,7 +104,7 @@ InstanceOf: NgInsurerOrganization
 Usage: #example
 Title: "Truth HMO"
 Description: "Truth Health Management Organization."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "HMO-TRUTH-2025"
 * active = true
 * name = "Truth Health Maintenance Organization"
