@@ -52,7 +52,7 @@ Id: ng-vaccine-icd-cs
 Title: "NG IMMZ.D.DE4 ICD11 Vaccine Library"
 Description: "ICD11 code Immunization.vaccineCode. Dose/order is not encoded in codes; use protocolApplied.doseNumber[x]."
 * ^status = #active
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-vaccine-icd-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-vaccine-icd-cs"
 * ^experimental = false
 * ^publisher = "DHIN"
 * ^caseSensitive = true
@@ -76,7 +76,7 @@ CodeSystem: NGVaccineLibrarySNOMEDCS
 Id: ng-vaccine-local-to-snomed-cs
 Title: "NG IMMZ.D.DE4 Vaccine Library (SNOMED CT)"
 Description: "SNOMED-CT code Immunization.vaccineCode. Dose/order is not encoded in codes; use protocolApplied.doseNumber[x]."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-vaccine-local-to-snomed-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-vaccine-local-to-snomed-cs"
 * ^status = #active
 * ^experimental = false
 * ^publisher = "DHIN"
