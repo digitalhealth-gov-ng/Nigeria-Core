@@ -2,8 +2,8 @@ Profile: NgGoal
 Parent: Goal
 Title: "NG Goal"
 Id: ng-goal
-Description: "Minimal Goal profile for the 2025 Connectathon."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-goal"
+Description: "Minimal Goal profile for the Nigeria Core."
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-goal"
 
 // Core constraints
 * lifecycleStatus 1..1 MS
