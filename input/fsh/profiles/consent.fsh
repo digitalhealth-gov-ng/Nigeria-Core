@@ -8,7 +8,7 @@ Title: "NG Consent"
 Description: "Minimal consent profile for Nigerian implementations (e.g., NDPR / NIS ISO/TR 17975 use). Keeps constraints light to reduce QA noise."
 
 * ^status = #active
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-consent"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-consent"
 
 // Core must-haves
 * status 1..1 MS
@@ -70,8 +70,8 @@ Usage: #example
 Title: "Consent Patient (Minimal)"
 Description: "Nigeria 2025 Connectathon Consent Patient Profile"
 * meta.lastUpdated = "2025-10-21T09:59:00+01:00"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].value = "08070001234"
 * active = true
@@ -90,7 +90,7 @@ InstanceOf: NgOrganization
 Usage: #inline
 Title: "Sunrise Family Clinic (Custodian)"
 Description: "Nigeria 2025 Connectathon Consent Organization Profile"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "HCF-12347"
 * active = true
 * name = "Sunrise Family Clinic"
