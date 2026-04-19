@@ -1,6 +1,6 @@
-# 🇳🇬 DHIN 2025 Connectathon
+# 🇳🇬 Nigeria Core - FHIR IG
 
-**Maintained by:**  Digital Health Interoperability Network (DHIN)  
+**Maintained by:**  Nigeria Digital in Health Initiative (NDHI)  
 **Project Type:** HL7® FHIR® Implementation Guide  
 **Language:** FHIR Shorthand (FSH)  
 **Build Tool:** SUSHI (ShortHand Unshortens Syntax Iteratively)  
@@ -8,14 +8,14 @@
 
 ## Overview
 
-This repository contains the **2025 Connectathon FHIR Implementation Guide (IG)** published by the **DHIN**.  Showcasing end-to-end, standards-based interoperability across **five tracks**:
+This repository contains the **Nigeria Core FHIR Implementation Guide (IG)** published by the **NDHI**.  Showcasing end-to-end, standards-based interoperability across **five tracks**:
 - **Immunization**
 - **MNCH Referral**
 - **ePharamacy**
 - **Insurance & Claims**
 - **Medical-Devices Communications**
 
-The IG defines how HL7 FHIR standards are applied to immunization use cases in Nigeria, aligning with the **WHO SMART Guidelines**, **Digital Adaptation Kits (DAKs)**, and global best practices in digital health interoperability.
+The IG defines how HL7 FHIR standards are applied to immunization use cases in Nigeria, aligning with global best practices in digital health standards and interoperability.
 
 ## Repository Structure
 
@@ -103,12 +103,12 @@ Ensure example references resolve (e.g., Patient/NgPatient-001, Organization/NgO
 
 
 ### Contact
-- **DHIN IG Mainatiners: info@dhin-hie.org
+- **Nigeria Core FHIR IG Mainatiners: emeka2015@gmail.com
 
 ### License
 This project is released under the MIT License. See LICENSE for details.
 
-_Built for the DHIN 2025 Connectathon to accelerate safe, standards-based interoperability across immunization, MNCH, ePharmacy, claims, and device ecosystems in Nigeria. _
+_Built for the Nigeria core to accelerate safe, standards-based interoperability across Nigeria's digital health systems. _
 ```bash
 
 
