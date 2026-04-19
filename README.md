@@ -1,7 +1,7 @@
 # 🇳🇬 Nigeria Core - FHIR IG
 
 **Maintained by:**  Nigeria Digital in Health Initiative (NDHI)  
-**Project Type:** HL7® FHIR® Implementation Guide  
+**Project Type:** Nigeria Core FHIR® Implementation Guide  
 **Language:** FHIR Shorthand (FSH)  
 **Build Tool:** SUSHI (ShortHand Unshortens Syntax Iteratively)  
 **License:** MIT
