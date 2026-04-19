@@ -3,7 +3,7 @@ Parent: RelatedPerson
 Title: "NG RelatedPerson"
 Id: ng-related-person
 Description: "Sibling or parent of the sick person."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-related-person"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-related-person"
 
 * patient 1..1 MS
 * patient only Reference(NgPatient)
@@ -41,7 +41,7 @@ Description: "Older brother of NgPatient-003."
 * name[0].family = "Abdullahi"
 * gender = #male
 * birthDate = 2015-07-12
-* relationship[0].coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-relationship"
+* relationship[0].coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-relationship"
 * relationship[0].coding[0].code = #BROTHER
 * relationship[0].coding[0].display = "Brother"
 * relationship[0].text = "Brother"
@@ -60,7 +60,7 @@ Description: "Younger sister of NgPatient-003."
 * name[0].family = "Abdullahi"
 * gender = #female
 * birthDate = 2018-03-02
-* relationship[0].coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-relationship"
+* relationship[0].coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-relationship"
 * relationship[0].coding[0].code = #SISTER
 * relationship[0].coding[0].display = "Sister"
 * relationship[0].text = "Sister"
@@ -79,7 +79,7 @@ Description: "Brother of NgPatient-001."
 * name[0].family = "Okafor"
 * gender = #male
 * birthDate = 1990-01-20
-* relationship[0].coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-relationship"
+* relationship[0].coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-relationship"
 * relationship[0].coding[0].code = #BROTHER
 * relationship[0].coding[0].display = "Brother"
 * relationship[0].text = "Brother"
@@ -115,7 +115,7 @@ Description: "ISO 25237-compliant pseudonymization of NgRelatedPerson-003; direc
 * birthDate = 1990-01-01
 
 // Relationship role is non-identifying and retained
-* relationship[0].coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-relationship"
+* relationship[0].coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-relationship"
 * relationship[0].coding[0].code = #BROTHER
 * relationship[0].coding[0].display = "Brother"
 * relationship[0].text = "Brother"
