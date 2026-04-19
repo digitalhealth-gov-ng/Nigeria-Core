@@ -3,7 +3,7 @@ Parent: CoverageEligibilityResponse
 Id: ng-coverage-eligibility-response
 Title: "NG Claim Coverage Eligibility Response"
 Description: "Profile defining the response from an HMO to an eligibilty request"
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-coverage-eligibility-response"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-coverage-eligibility-response"
 
 * identifier 0..* MS
 * status 1..1 MS
@@ -40,7 +40,7 @@ Screen lights up green: -Active policy. Outpatient benefits in force. Copay: ₦
 Patient cleared for emergency treatment.
 """
 
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/eligibility-request-id"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/eligibility-request-id"
 * identifier[0].value = "ELAPPROVE01"
 * status = #active
 * purpose[0] = #benefits
@@ -67,7 +67,7 @@ Authorization code: PA-2025-8847. Valid until: 10-Nov-2025.-
 Approval arrives while Chika is being wheeled to radiology.
 """
 
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/eligibility-request-id"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/eligibility-request-id"
 * identifier[0].value = "ELAPPROVE02"
 * status = #active
 * purpose[0] = #validation
@@ -95,7 +95,7 @@ Approval arrives while Chika is being wheeled to radiology.
 
 * insurance[0].item[0].authorizationRequired = true
 * insurance[0].item[0].authorizationSupporting[0].text = "Emergency presentation with suspected fracture"
-* insurance[0].item[0].authorizationUrl = "https://sandbox.dhin-hie.org/ig/CodeSystem/eligibility-request-id#PA-2025-8847"
+* insurance[0].item[0].authorizationUrl = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/eligibility-request-id#PA-2025-8847"
 
 * insurance[0].item[0].benefit[0].type.coding.system = "http://terminology.hl7.org/CodeSystem/benefit-type"
 * insurance[0].item[0].benefit[0].type.coding.code = #benefit
