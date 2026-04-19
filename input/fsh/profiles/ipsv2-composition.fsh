@@ -6,14 +6,14 @@ Parent: Composition
 Id: ng-ips-composition
 Title: "NG IPS Composition"
 Description: """
-International Patient Summary (IPS) Composition adapted for Nigeria/DHIN 2025 Connectathon.
+International Patient Summary (IPS) Composition adapted for Nigeria Core.
 Conforms to IPS v2 Composition and narrows key references to local NG profiles where available.
 Includes common IPS sections: Problems, Allergies, Medications, Immunizations, Procedures, Results, Devices, and Plan of Care. 
 """
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-ips-composition"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-ips-composition"
 * ^version = "1.0.0"
 * ^status = #active
-* ^publisher = "DHIN 2025 Connectathon"
+* ^publisher = "NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 * ^experimental = false
 
