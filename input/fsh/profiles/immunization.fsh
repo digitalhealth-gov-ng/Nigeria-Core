@@ -3,7 +3,7 @@ Parent: Immunization
 Title: "NG Immunization"
 Description: "Nigerian Profile for Immunization resource."
 Id: ng-immunization
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-immunization"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-immunization"
 
 * identifier 0..1
 * vaccineCode 1..1 MS
@@ -84,7 +84,7 @@ Description: "Pentavalent 1 administered to NgPatient-003 at Gwagwalada PHC."
 * route.text = "Intramuscular"
 // Show use of NextDoseDate extension (via protocolApplied)
 * extension[nextDoseDate].valueDate = 2024-09-10
-* extension[nextDoseDate].url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/next-dose-date"
+* extension[nextDoseDate].url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/next-dose-date"
 * protocolApplied[0].doseNumberPositiveInt = 4
 
 
@@ -171,4 +171,4 @@ Description: "Td dose administered to NgPatient-001 at Asokoro District Hospital
 * protocolApplied[0].targetDisease[0].coding.display = "Viral hepatitis type B"
 
 * extension[nextDoseDate].valueDate = "2026-05-18"
-* extension[nextDoseDate].url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/next-dose-date"
+* extension[nextDoseDate].url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/next-dose-date"
