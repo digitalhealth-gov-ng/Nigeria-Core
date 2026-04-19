@@ -8,7 +8,7 @@ Title: "4-NG AEFI Report Bundle"
 Description: "Minimal transaction bundle to report an AEFI with Patient, Immunization, AdverseEvent, and supporting data."
 
 * ^status = #active
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-aefi-report-bundle"
+* ^url = "https://fhir-ig.digitalthealth.gov.ng/StructureDefinition/ng-aefi-report-bundle"
 
 // Bundle basics
 * type 1..1 MS
@@ -122,8 +122,8 @@ Usage: #inline
 Title: "Infant – Terfa Dooshima"
 * meta.lastUpdated = "2025-11-06T08:30:00+01:00"
 * identifier[PhoneNumber].value = "08030001111"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalthealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalthealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 * name.given[0] = "Terfa"
@@ -142,11 +142,11 @@ Instance: NgOrganization-AEFI-001
 InstanceOf: NgOrganization
 Usage: #inline
 Title: "Wadata PHC, Makurdi"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalthealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "HCF-55667"
 * active = true
 * name = "Wadata Primary Health Centre"
-* type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-type"
+* type.coding.system = "https://fhir-ig.digitalthealth.gov.ng/CodeSystem/nigeria-facility-type"
 * type.coding.code = #phc-center-l1
 * type.coding.display = "PHC Center Level 1"
 * telecom[0].system = #phone
@@ -161,7 +161,7 @@ Instance: NgPractitioner-AEFI-001
 InstanceOf: NgPractitioner
 Usage: #inline
 Title: "Nurse Gloria Anum"
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalthealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value = "MDCN-12347"
 * active = true
 * name.given = "Gloria"
@@ -206,7 +206,7 @@ Usage: #inline
 Title: "Measles-Rubella (MR) Dose"
 * status = #completed
 * vaccineCode.text = "Measles-Rubella (MR)"
-* vaccineCode.coding =  https://sandbox.dhin-hie.org/ig/CodeSystem/ng-vaccine-local#IMMZ.Z.DE2
+* vaccineCode.coding =  https://fhir-ig.digitalthealth.gov.ng/CodeSystem/ng-vaccine-local#IMMZ.Z.DE2
 * patient = Reference(urn:uuid:1212aabb-e5f6-4789-a123-456789abcdef)
 * lotNumber = "MR-2025-04-B"
 * expirationDate = "2026-09-15"
