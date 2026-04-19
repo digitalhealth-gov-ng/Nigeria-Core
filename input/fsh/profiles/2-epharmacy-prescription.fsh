@@ -181,8 +181,8 @@ Usage: #inline
 Title: "Prescription Patient - Ibrahim Yusuf"
 * meta.lastUpdated = "2025-10-28T08:00:00+01:00"
 * identifier[PhoneNumber].value = "08056789012"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 * name.given[0] = "Mallam"
@@ -202,7 +202,7 @@ InstanceOf: NgPractitioner
 Usage: #example
 Title: "Prescribing Physician - Dr. Oluwaseun Bakare"
 Description: "Prescribing Physician - Dr. Oluwaseun Bakare"
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value = "MDCN-98765"
 * active = true
 * name.given = "Oluwaseun"
@@ -216,7 +216,7 @@ Instance: NgOrganization-Provider-Rx-001
 InstanceOf: NgProviderOrganization
 Usage: #inline
 Title: "Kano General Hospital"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "HCF-LA-8899"
 * active = true
 * name = "Kano General Hospital"
@@ -229,7 +229,7 @@ Title: "Kano General Hospital"
 * address.city = "Kano"
 * address.district = "kn-gezawa"
 * address.state = "KN"
-* extension[NGOrganizationOwner].valueCodeableConcept.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-location-owner-cs"
+* extension[NGOrganizationOwner].valueCodeableConcept.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-location-owner-cs"
 * extension[NGOrganizationOwner].valueCodeableConcept.coding.code = #public
 
 // -------------------- NgOrganization (Pharmacy) ----------------
@@ -237,7 +237,7 @@ Instance: NgOrganization-Pharmacy-001
 InstanceOf: NgPharmacyOrganization
 Usage: #inline
 Title: "Medix Pharmacy"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "PHARM-LA-5566"
 * active = true
 * name = "Medix Pharmacy"
