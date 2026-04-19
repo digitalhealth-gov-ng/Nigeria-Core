@@ -2,11 +2,11 @@ CodeSystem: NGDeviceIdentifierCS
 Id: nigeria-device-identifier
 Title: "NG Electromechanical Medical Device Identifier CS"
 Description: "Simplified CodeSystem of 50 placeholder identifiers for electromechanical medical devices (vital signs, analyzers, imaging/DICOM, bedside, handheld, IoT)."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-device-identifier"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-device-identifier"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
-* ^publisher = "FMoHSW / DHIN 2025 Connectathon"
+* ^publisher = "FMoHSW"
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 
