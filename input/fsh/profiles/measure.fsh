@@ -4,7 +4,7 @@ Parent: Measure
 Id: ng-measure
 Title: "NG Measure"
 Description: "A profile on the Measure resource used to define indicators within prescription program."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-measure"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-measure"
 
 * identifier 1..1 MS
 * identifier.value 1..1
@@ -50,7 +50,7 @@ InstanceOf: NgMeasure
 Usage: #example
 Title: "Example Ng Measure (Dispense within 48h)"
 Description: "Proportion of ePrescriptions dispensed within 48 hours of prescription."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value  = #HCF-12341
 * status = #active
 * experimental = false
@@ -90,7 +90,7 @@ InstanceOf: NgMeasure
 Usage: #example
 Title: "Example Ng Measure (Counseling Documented)"
 Description: "Proportion of dispensations with counseling documented."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value  = #HCF-12343
 * status = #active
 * experimental = false
@@ -128,7 +128,7 @@ InstanceOf: NgMeasure
 Usage: #example
 Title: "Example Ng Measure (Claim Approval Rate)"
 Description: "Proportion of submitted claims that are approved."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value  = #HCF-12345
 * status = #active
 * experimental = false
