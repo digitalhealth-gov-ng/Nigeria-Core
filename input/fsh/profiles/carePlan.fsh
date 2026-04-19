@@ -3,7 +3,7 @@ Parent: CarePlan
 Title: "NG CarePlan"
 Id: ng-care-plan
 Description: "A simple CarePlan profile for the 2025 Connectathon."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-care-plan"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-care-plan"
 // Core elements
 * status 1..1 MS
 * intent 1..1 MS
