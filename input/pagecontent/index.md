@@ -1,29 +1,29 @@
-# DHIN 2025 Connectathon FHIR Implementation Guide
+# Nigeria Core FHIR Implementation Guide
 
 ## Purpose
-The DHIN 2025 Connectathon Implementation Guide (IG) brings together multiple tracks under a single standards-based framework to demonstrate, test, and advance healthcare interoperability in Nigeria and across Africa.  
-This IG follows the **WHO SMART Guidelines** approach (Standards-based, Machine-readable, Adaptable, Requirements-based, Testable), leveraging DAKs and HL7 FHIR R4 artifacts so systems can exchange health information seamlessly, securely, and in line with national and international best practices.
+The Nigeria Core Implementation Guide (IG) brings together multiple tracks under a single standards-based framework to demonstrate, test, and advance healthcare interoperability in Nigeria.  
+This FHIR IG leveraging HL7 FHIR R4 artifacts so systems can exchange health information seamlessly, securely, and in line with national and international best practices.
 
 ---
 
 ## Background
-Nigeria’s health information ecosystem is often fragmented and siloed. The [**Digital Health Interoperability Network (DHIN)**](https://www.dhin-hie.org) in collaboration with many government and development stakeholders convenes regulators, providers, developers, insurers, and innovators to design and test practical interoperability solutions through structured connectathons.  
-This IG documents the machine-readable artifacts, profiles, and value sets for the **2025 DHIN Connectathon tracks**:
+Nigeria’s health information ecosystem is often fragmented and siloed. The [**Nigeria Digital in Health Initiative (NDHI)**](https://www.digitalhealth.gov.ng/) of the Federal Ministry of Health and Social Welfare (FMoHSW) in collaboration with other health and ICT agencies and regulators, EMR and EHR providers, software developers, insurers, and innovators use this IG to design and test practical standardized and interoperability solutions.  
+This IG documents the machine-readable artifacts, profiles, and value sets for the **Health Programes**:
 
 1. Health Insurance & Claims  
-2. MNCH Referral  
+2. eCHIS
 3. ePharmacy (ePrescription & eDispensing)  
 4. Immunization  
 5. Medical Devices Communication
 6. SON Standards and NDPC Regulation
 7. Registries (MDCN and PCN provider and Facility registries)
 
-Each track builds on DAKs, regulatory frameworks, and stakeholder priorities—providing reference implementations for production systems.
+Each track builds on program datasets, relevant regulatory frameworks, and stakeholder priorities—providing reference implementations for production systems.
 
 ---
 
 ## Scope of the FHIR Implementation Guide
-- Standardize **profiles, value sets, and extensions** for each track  
+- Standardize **profiles, value sets, and extensions** for each program  
 - Enable **secure interoperable data exchange** across facilities, pharmacies, insurers, referral networks, immunization registries, and device platforms  
 - Support **decision-support, regulatory compliance, and real-time data exchange** through open APIs  
 - Provide artifacts for **testing and conformance validation** during and beyond the Connectathon
@@ -75,9 +75,7 @@ All exchanges are defined via **FHIR R4 profiles and conformance statements** in
 
 | Acronym | Meaning |
 |---|---|
-| AEFI | Adverse Event Following Immunization |
-| DAK | Digital Adaptation Kit |
-| DHIN | Digital Health Interoperability Network |
+| NDHI | Nigeria Digital in Health Initiative |
 | SMART | Standards-based, Machine-readable, Adaptable, Requirements-based, Testable |
 
 ---
