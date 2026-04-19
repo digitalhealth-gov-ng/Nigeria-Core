@@ -156,12 +156,12 @@ Title: "Eligibility Patient"
 Description: "A Patient Chika whose service eligibility is being sorth."
 * meta.lastUpdated = "2024-10-15T09:00:00+01:00"
 * identifier[PhoneNumber].value = "08031112233"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
-* identifier[NationalIDNo].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[NationalIDNo].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[NationalIDNo].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[NationalIDNo].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[NationalIDNo].type.coding.code = #NIN
 * identifier[NationalIDNo].value = "23456565514"
 * name.given[0] = "Chika"
@@ -180,7 +180,7 @@ InstanceOf: NgPractitioner
 Usage: #example
 Title: "Attending Practitioner"
 Description: "A Healthcare provider checking for a given Patient's eligibility for service."
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value = "MDCN-45231"
 * active = true
 * name.given = "Elidayo"
@@ -195,7 +195,7 @@ InstanceOf: NgInsurerOrganization
 Usage: #example
 Title: "XYZ HMO"
 Description: "A Health Insurance Organization."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "CLM-2025-0001"
 * active = true
 * name = "XYZ HMO"
@@ -217,7 +217,7 @@ InstanceOf: NgProviderOrganization
 Usage: #example
 Title: "City General Hospital"
 Description: "A Hospital organization where a Patient has gone for service."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "CLM-2025-0001"
 * active = true
 * name = "City General Hospital"
