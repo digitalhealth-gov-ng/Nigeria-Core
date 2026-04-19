@@ -2,13 +2,13 @@ CodeSystem: NGWardsCS
 Id: nigeria-wards
 Title: "NG Administrative Wards CS"
 Description: "This CodeSystem defines ward codes and names mapped to their respective Local Government Areas (LGAs) in Nigeria."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-wards"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-wards"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
 * ^experimental = false
 * ^hierarchyMeaning = #grouped-by
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 
 // Abaji area councle wards in FCT
