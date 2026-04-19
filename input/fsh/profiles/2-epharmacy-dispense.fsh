@@ -193,8 +193,8 @@ Usage: #inline
 Title: "Dispense Patient - Ibrahim Musa"
 * meta.lastUpdated = "2025-10-29T09:00:00+01:00"
 * identifier[PhoneNumber].value = "08067890123"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 * name.given[0] = "Ibrahim"
@@ -212,7 +212,7 @@ Instance: NgPractitioner-Disp-001
 InstanceOf: NgPractitioner
 Usage: #inline
 Title: "Prescribing Physician - Dr. Fatima Yusuf"
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value = "MDCN-54321"
 * active = true
 * name.given = "Fatima"
@@ -226,7 +226,7 @@ Instance: NgOrganization-Pharmacy-Disp-001
 InstanceOf: NgPharmacyOrganization
 Usage: #inline
 Title: "Medix Pharmacy Limited"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "PHARM-KN-7788"
 * active = true
 * name = "Medix Pharmacy Limited"
