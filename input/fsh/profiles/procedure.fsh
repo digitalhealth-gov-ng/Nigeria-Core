@@ -2,8 +2,8 @@ Profile: NgProcedure
 Parent: Procedure
 Title: "NG Procedure"
 Id: ng-procedure
-Description: "Minimal Procedure profile for the 2025 Connectathon."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-procedure"
+Description: "Minimal Procedure profile for the Nigeria Core."
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-procedure"
 
 // Core constraints
 * status 1..1 MS
