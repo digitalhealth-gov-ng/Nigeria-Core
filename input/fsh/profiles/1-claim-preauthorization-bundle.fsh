@@ -146,13 +146,13 @@ Usage: #example
 Title: "Eligibility Patient"
 Description: "A Patient Chika whose service eligibility is being sorth."
 * meta.lastUpdated = "2024-10-15T09:00:00+01:00"
-* identifier[NationalIDNo].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[NationalIDNo].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[NationalIDNo].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[NationalIDNo].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[NationalIDNo].type.coding.code = #NIN
 * identifier[NationalIDNo].value = "23456565514"
 * identifier[PhoneNumber].value = "08031112233"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 * name.given[0] = "Chika"
@@ -173,8 +173,8 @@ Usage: #inline
 Title: "PreAuth Patient"
 * meta.lastUpdated = "2025-10-20T10:15:00+01:00"
 * identifier[PhoneNumber].value = "08034561234"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 * name.given[0] = "Chinedu"
@@ -195,7 +195,7 @@ InstanceOf: NgPractitioner
 Usage: #example
 Title: "Attending Practitioner (Chika)"
 Description: "A Healthcare provider checking for a given Patient's eligibility for service."
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value = "MDCN-45231"
 * active = true
 * name.given = "Elidayo"
@@ -211,7 +211,7 @@ Instance: NgPractitioner-PreAuth-002
 InstanceOf: NgPractitioner
 Usage: #inline
 Title: "Requesting Clinician"
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value = "MDCN-12345"
 * active = true
 * name.given = "Hadiza"
@@ -228,7 +228,7 @@ Instance: NgOrganization-Provider-001
 InstanceOf: NgProviderOrganization
 Usage: #inline
 Title: "Unity District Hospital"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "HCF-12342"
 * active = true
 * name = "Unity District Hospital"
@@ -241,7 +241,7 @@ Title: "Unity District Hospital"
 * address.city = "Garki"
 * address.district = "fc-municipal"
 * address.state = "FC"
-* extension[NGOrganizationOwner].valueCodeableConcept.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-location-owner-cs"
+* extension[NGOrganizationOwner].valueCodeableConcept.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-location-owner-cs"
 * extension[NGOrganizationOwner].valueCodeableConcept.coding.code = #private
 
 // -------------------- NgOrganization (Insurer/Payer) -----------
@@ -251,7 +251,7 @@ InstanceOf: NgInsurerOrganization
 Usage: #example
 Title: "XYZ HMO"
 Description: "A Health Insurance Organization."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "CLM-2025-0001"
 * active = true
 * name = "XYZ HMO"
@@ -270,7 +270,7 @@ Instance: NgOrganization-Insurer-002
 InstanceOf: NgInsurerOrganization
 Usage: #inline
 Title: "PrimeCare HMO"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "HMO876653"
 * active = true
 * name = "PrimeCare HMO"
