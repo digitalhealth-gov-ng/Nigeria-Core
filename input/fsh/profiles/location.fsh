@@ -3,7 +3,7 @@ Parent: Location
 Title: "NG Location"
 Id: ng-location 
 Description: "A profile for immunization service locations, including health facilities, outreach sites, and mobile vaccination units."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-location"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-location"
 * ^version = "1.0.0"
 * ^status = #active
 * status 0..1
@@ -48,7 +48,7 @@ Description: "Outpatient department at Asokoro District Hospital."
 
 * status = #active
 * name = "Asokoro OPD"
-* type[0].coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-type"
+* type[0].coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-type"
 * type[0].coding.code = #hospital
 * type[0].coding.display = "Secondary Hospital"
 * address.line = "Yakubu Gowon Crescent, Asokoro"
@@ -73,7 +73,7 @@ Title: "Example Kano Central Pharmacy Counter"
 Description: "Dispensing counter at Kano Central Hospital Pharmacy."
 * status = #active
 * name = "Pharmacy Counter"
-* type[0].coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-type"
+* type[0].coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-type"
 * type[0].coding.code = #hospital
 * type[0].coding.display = "Secondary Hospital"
 * address.line = "No. 8 Lafia Road"
@@ -98,7 +98,7 @@ Title: "Example Gwagwalada Immunization Room"
 Description: "RI room at Gwagwalada Model PHC."
 * status = #active
 * name = "Immunization Room"
-* type[0].coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-type"
+* type[0].coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-type"
 * type[0].coding.code = #phc-center-l2
 * type[0].coding.display = "PHC Center Level 2"
 * address.line = "Opposite Central Market"
@@ -121,7 +121,7 @@ Title: "Example Gurdi Outreach Site"
 Description: "Periodic immunization outreach post in Abaji Area Council, FCT."
 * status = #active
 * name = "Gurdi Outreach Site"
-* type[0].coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-type"
+* type[0].coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-type"
 * type[0].coding.code = #outreach
 * type[0].coding.display = "Outreach Post"
 * address.line = "Primary School Field, Gurdi Ward"
@@ -130,7 +130,7 @@ Description: "Periodic immunization outreach post in Abaji Area Council, FCT."
 * address.state = #FC
 * address.country = #NG
 // Optional ward extension (uses your NGAdministrativeWard)
-* address.extension[NGadministrativeWard].valueCodeableConcept.coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-wards"
+* address.extension[NGadministrativeWard].valueCodeableConcept.coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-wards"
 * address.extension[NGadministrativeWard].valueCodeableConcept.coding[0].code = #fc-amac-gurdi
 * address.extension[NGadministrativeWard].valueCodeableConcept.coding[0].display = "Gurdi"
 * position.latitude = 8.470
