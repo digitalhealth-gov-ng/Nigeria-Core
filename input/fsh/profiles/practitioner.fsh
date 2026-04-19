@@ -4,7 +4,7 @@ Parent: Practitioner
 Title: "NG Practitioner"
 Description: "Profile for a Nigerian Practitioner" 
 Id: ng-practitioner
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-practitioner"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-practitioner"
 * identifier 0..* MS
 * identifier.system 1..1
 * identifier.system ^short = "The namespace for the identifier value e.g a MDCN URL"
@@ -51,7 +51,7 @@ Description: "Obstetrician supporting ANC referrals."
 
 * id = "00124455-e5f6-4789-a123-456789abcdef"
 * active = true
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value = #MDCN-45231
 * name.family = "Adebayo"
 * name.given = "Kehinde"
@@ -73,7 +73,7 @@ Usage: #example
 Title: "Example Ng Practitioner (ePharmacy & Claims)"
 Description: "Pharmacist dispensing and submitting claims."
 * active = true
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-pcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-pcn"
 * identifier[0].value = #PCN-45231
 * name.family = "Okeke"
 * name.given = "Nkiru"
@@ -95,7 +95,7 @@ Usage: #example
 Title: "Example Ng Practitioner (Medical Devices)"
 Description: "CHEW operating connected vitals devices."
 * active = true
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value = #CHEW-12347
 * name.family = "Garba"
 * name.given = "Hauwa"
@@ -117,7 +117,7 @@ Description: "Triage Nurse used in Claims check"
 
 * active = true
 // Required identifier replaced with pseudonym token
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value  = "PRSN-9C4E-7B12-OB01"
 // Neutral alias (profile requires given & family)
 * name.family = "Aderemi"
@@ -150,7 +150,7 @@ Description: "ISO 25237-compliant pseudonymization of NgPractitioner-001; direct
 * active = true
 
 // Required identifier replaced with pseudonym token
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value  = "PRSN-9C4E-7B12-OB01"
 
 // Neutral alias (profile requires given & family)
@@ -179,7 +179,7 @@ Description: "Triage Nurse used in Claims check"
 
 * active = true
 // Required identifier replaced with pseudonym token
-* identifier[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* identifier[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * identifier[0].value  = "PRSN-9C4E-7B12-OB01"
 // Neutral alias (profile requires given & family)
 * name.family = "Sister"
