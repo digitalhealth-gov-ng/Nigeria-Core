@@ -3,13 +3,13 @@ CodeSystem: NGRelationshipsCS
 Id: nigeria-relationship
 Title: "NG Relationships CS"
 Description: "This CodeSystem defines list of persons related to a patient, but who is not a direct target of care"
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-relationship"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-relationship"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
 //* ^hierarchyMeaning = #is-a
 * ^experimental = false
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 
 // The different relationships used in the IG
@@ -36,13 +36,13 @@ CodeSystem: NGSiblingHealthStatusCS
 Id: nigeria-sibling-health-status
 Title: "NG Health Status CS"
 Description: "This CodeSystem IMMZ.C.DE30 defines the health of the client's sibling"
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-sibling-health-status"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-sibling-health-status"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
 * ^experimental = false
 //* ^hierarchyMeaning = #is-a
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 // The CodeSystem for Sibling Health Status
 * #ALIVE	"Alive" "Sibling referenced is still alive"
@@ -57,12 +57,12 @@ CodeSystem: NGFacilityTypeCS
 Id: nigeria-facility-type
 Title: "NG Facility Type CS"
 Description: "A standardized classification system used to describe the type or level of health facility within a healthcare delivery system, based on the scope of services provided, staffing, infrastructure, and administrative role."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-type"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-type"
 * ^status = #active
 //* ^hierarchyMeaning = #is-a
 * ^caseSensitive = true
 * ^experimental = false
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * ^content = #complete
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 // The CodeSystem for Grouping different Facility types
@@ -78,8 +78,8 @@ CodeSystem: NGOrganizationOwnerCS
 Id: nigeria-location-owner-cs
 Title: "NG Location Owner CS"
 Description: "This CodeSystem defines Immunization Location Owner."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-location-owner-cs"
-* ^publisher = "DHIN"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-location-owner-cs"
+* ^publisher = "NDHI"
 * ^status = #active
 * ^caseSensitive = false
 * ^content = #complete
@@ -98,7 +98,7 @@ CodeSystem: NGClinicalStatusCS
 Id: nigeria-clinical-status 
 Title: "NG Adverse Event CS"
 Description: "A classification system that represents the current clinical status of an individual who experienced an Adverse Event Following Immunization (AEFI), based on medical observation, investigation, or follow-up assessment."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-clinical-status"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-clinical-status"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = false
@@ -115,11 +115,11 @@ CodeSystem: NGSessionTypeCS
 Id: nigeria-immunization-session-type
 Title: "NG Immunization Session types CS"
 Description: "Type of session for immunization Could be in a fixed facility, outreach or mobile."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-immunization-session-type"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-immunization-session-type"
 * ^status = #active
 //* ^hierarchyMeaning = #is-a
 * ^caseSensitive = false
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * ^experimental = false
 * ^content = #complete
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
@@ -133,13 +133,13 @@ CodeSystem: NGImmContraindicationCS
 Id: nigeria-immunization-contraindication
 Title: "NG Vaccine contraindications CS"
 Description: "A set of standardized codes used to represent clinical conditions, diagnoses, or circumstances that serve as contraindications to the administration of one or more vaccines."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-immunization-contraindication"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-immunization-contraindication"
 * ^status = #active
 //* ^hierarchyMeaning = #is-a
 * ^experimental = false
 * ^caseSensitive = false
 * ^content = #complete
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 // The CodeSystem for Immunization Contraindications
 * #immuno	"Immunocompromised" "The individual has a weakened immune system due to a medical condition (e.g., cancer, organ transplant, or immunosuppressive therapy), which contraindicates certain live vaccines."
@@ -153,13 +153,13 @@ CodeSystem: NGPregnancyStatusCS
 Id: nigeria-pregnancy-status
 Title: "NG Client Pregnancy Status CS"
 Description: "This CodeSystem defines list of options for Pregnancy status of a Client"
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-pregnancy-status"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-pregnancy-status"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = false
 * ^experimental = false
 //* ^hierarchyMeaning = #is-a
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 // The CodeSystem for Pregnancy Status
 * #pregnant	"Pregnant" "The Client's pregnancy status is positive"
@@ -175,13 +175,13 @@ CodeSystem: NGPatientIdentifierTypeCS
 Id: patient-identifier-cs
 Title: "NG Patient Identifier Type CS"
 Description: "This CodeSystem defines list of options for uniquely Identifting a Client"
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = false
 * ^experimental = false
 * ^hierarchyMeaning = #is-a
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 
 * #MRN	"mrn" "Medical Record Number"
@@ -206,13 +206,13 @@ CodeSystem: NGMDCNCS
 Id: nigeria-mdcn
 Title: "NG Practitioner Identifier CS"
 Description: "This CodeSystem IMMZ.C.DE14 defines placeholder codes to manage physician identifiers in Nigeria."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-mdcn"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-mdcn"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
 * ^hierarchyMeaning = #grouped-by
 * ^experimental = false
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 
 // Sample Codes for testing
@@ -241,13 +241,13 @@ CodeSystem: NGPCNCS
 Id: nigeria-pcn
 Title: "NG Practitioner Identifier CS"
 Description: "This CodeSystem defines placeholder codes to manage Pharmcists' identifiers in Nigeria validated at  https://pcn.gov.ng/practice-number."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-pcn"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-pcn"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
 * ^hierarchyMeaning = #grouped-by
 * ^experimental = false
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 // Sample Codes for testing
 * #PCN-45231 "1"
@@ -264,7 +264,7 @@ CodeSystem: NGFacilityIdentifierCS
 Id: nigeria-facility-registry
 Title: "NG Facility Identifier CS"
 Description: "This CodeSystem IMMZ.A.DE1 defines placeholder codes to manage Facility identifiers in Nigeria."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -297,7 +297,7 @@ CodeSystem: NgCarePlanCategoryCS
 Id: ng-careplan-category-cs
 Title: "NG CarePlan Category Codes"
 Description: "Categories for CarePlan.category aligned to DHIN 2025 Connectathon tracks."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-careplan-category-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-careplan-category-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = false
@@ -320,7 +320,7 @@ CodeSystem: NgCarePlanActivityCS
 Id: ng-careplan-activity-cs
 Title: "NG CarePlan Activity Codes"
 Description: "Activities for CarePlan.activity.detail.code aligned to DHIN 2025 Connectathon tracks."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-careplan-activity-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-careplan-activity-cs"
 * ^status = #active
 * ^version = "0.1.0"
 * ^caseSensitive = true
@@ -344,7 +344,7 @@ Id: ng-device-metric-category-cs
 Title: "NG DeviceMetric Category Codes"
 Description: "Local mirror of DeviceMetric.category. Consider using 'http://terminology.hl7.org/CodeSystem/metric-category' in production."
 * ^status = #active
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-device-metric-category-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-device-metric-category-cs"
 * ^version = "0.1.0"
 * ^caseSensitive = true
 * ^content = #complete
@@ -360,7 +360,7 @@ Id: ng-device-type-cs
 Title: "NG DeviceType Codes"
 Description: "Local mirror of Device Type."
 * ^status = #active
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-device-type-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-device-type-cs"
 * ^version = "0.1.0"
 * ^caseSensitive = true
 * ^content = #complete
@@ -379,7 +379,7 @@ CodeSystem: NGHivStatusCS
 Id: nigeria-hiv-status
 Title: "NG Client HIV status CS"
 Description: "This CodeSystem IMMZ.C.DE31 defines list of options for HIV status of a Client"
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-hiv-status"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-hiv-status"
 
 * ^status = #active
 * ^content = #complete
@@ -399,7 +399,7 @@ CodeSystem: NgProvenanceActivityCS
 Id: ng-provenance-activity-cs
 Title: "NG Provenance Activity Codes"
 Description: "Local CodeSystem defining provenance activity codes for data lifecycle operations such as anonymization, de-identification, labeling, creation, and deletion, aligned to DHIN 2025 Connectathon artifacts."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-provenance-activity-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-provenance-activity-cs"
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = false
@@ -428,12 +428,12 @@ CodeSystem: NgBundleIdentifierCS
 Id: ng-bundle-identifier-cs
 Title: "NG Bundle Identifier Codes"
 Description: "Local CodeSystem defining standard bundle identifiers for DHIN 2025 Connectathon use cases, including claim transactions, immunization submissions, MNCH referrals, and device data exchanges."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-bundle-identifier-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-bundle-identifier-cs"
 * ^status = #active
 * ^version = "0.1.0"
 * ^caseSensitive = false
 * ^content = #complete
-* ^publisher = "FMoHSW / DHIN 2025 Connectathon"
+* ^publisher = "FMoHSW / NDHI"
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 
@@ -460,12 +460,12 @@ Description: """
 Local codes to identify the type used for an Eligibility Request identifier.
 Intended for use in CoverageEligibilityRequest.identifier.type.
 """
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/eligibility-request-id"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/eligibility-request-id"
 * ^version = "0.1.0"
 * ^status = #active
 * ^experimental = false
 * ^caseSensitive = true
-* ^publisher = "Digital Health Interoperability Network (DHIN)"
+* ^publisher = "NDHI"
 * ^content = #complete
 
 * #ELAPPROVE01 "Eligibility Approved"
@@ -488,12 +488,12 @@ CodeSystem: NgClaimProductOrServiceCS
 Id: ng-claim-product-or-service-cs
 Title: "NG Claim Product/Service Codes"
 Description: "Nigeria-specific productOrService codes for DHIN claims: consultations, procedures, labs, imaging, maternity packages, bed days, drugs, consumables, devices, transport, and other common HMO/NHIA items."
-* ^url = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-claim-product-or-service-cs"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-claim-product-or-service-cs"
 * ^version = "1.0.0"
 * ^status = #active
 * ^caseSensitive = false
 * ^content = #complete
-* ^publisher = "DHIN 2025 Connectathon"
+* ^publisher = "NDHI"
 * ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#NG "Nigeria"
 
