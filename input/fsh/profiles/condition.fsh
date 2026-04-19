@@ -3,7 +3,7 @@ Parent: Condition
 Title: "NG Condition"
 Id: ng-condition
 Description: "Minimal Condition profile for the 2025 Connectathon."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-condition"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-condition"
 
 // Core constraints
 * clinicalStatus 1..1 MS
