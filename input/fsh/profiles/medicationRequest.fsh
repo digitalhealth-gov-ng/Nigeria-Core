@@ -3,7 +3,7 @@ Parent: MedicationRequest
 Id: ng-medication-request
 Title: "NG MedicationRequest"
 Description: "A MedicationRequest profile with some of core elements for demonstration purposes."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-medication-request"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-medication-request"
 * status 1..1 MS
 * status from http://hl7.org/fhir/ValueSet/medicationrequest-status (required)
 * dosageInstruction 1..1 MS
@@ -41,7 +41,7 @@ Usage: #example
 Title: "Example Ng MedicationRequest (Amoxicillin)"
 Description: "Order for Amoxicillin 500 mg capsule x30."
 * id = "00126455-e5f6-4789-a123-456789abcdef"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/ValueSet/ng-atc-all-medications-vs"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/ValueSet/ng-atc-all-medications-vs"
 * identifier.value  = #J01-AMOX-CAP
 
 
@@ -79,7 +79,7 @@ InstanceOf: NgMedicationRequest
 Usage: #example
 Title: "Example Ng MedicationRequest (Paracetamol Suspension)"
 Description: "Order for Paracetamol 250 mg/5 mL, 100 mL."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/ValueSet/ng-atc-all-medications-vs"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/ValueSet/ng-atc-all-medications-vs"
 * identifier.value  = #N02-PARA-SYR
 
 
@@ -116,7 +116,7 @@ InstanceOf: NgMedicationRequest
 Usage: #example
 Title: "Example MedicationRequest (Insulin 100 IU/mL)"
 Description: "Order for Insulin 100 IU/mL vial, ongoing therapy."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/ValueSet/ng-atc-all-medications-vs"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/ValueSet/ng-atc-all-medications-vs"
 * identifier.value  = #A10-INSULIN-NPH
 //* groupIdentifier.system = "https://www.dhin-hie.org/ig/prescription-group"
 //* groupIdentifier.value  = "GRP-2025-3001"
