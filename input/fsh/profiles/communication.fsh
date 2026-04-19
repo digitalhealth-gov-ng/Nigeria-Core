@@ -11,7 +11,7 @@ Lightweight communication artifact for clinical messaging across DHIN tracks
 (e.g., MNCH referral updates, pharmacy notifications, insurer clarifications).
 Optimized to minimize QA noise while keeping key elements Must Support.
 """
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-communication"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-communication"
 * ^status = #active
 
 // ---- Core Must-Supports ----
