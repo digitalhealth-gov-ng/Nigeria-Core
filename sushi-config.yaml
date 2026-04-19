@@ -3,23 +3,23 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: org.dhin-hie.sandbox
-canonical: https://sandbox.dhin-hie.org/ig
-name: DHIN-2025Connectathon-FHIR-IG
-title: DHIN 2025Connectathon FHIR IG
-description: DHIN 2025 Connectathon Testing FHIR IG
+id: org.dhin-hie.sandbox ng.gov.digitalhealth.fhir-ig
+canonical: https://fhir-ig.digitalhealth.gov.ng
+name: Nigeria Core
+title: Nigeria Core - FHIR Implementation Guide 
+description: Implementation guide for standards and interoperability of the Nigeria digital health system
 status: draft # draft | active | retired | unknown
-version: 0.2.0
+version: 0.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2025+
-releaseLabel: ci-build
+copyrightYear: 206+
+releaseLabel: draft
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 
 jurisdiction: urn:iso:std:iso:3166#NG "Nigeria"
 publisher:
-  name: DHIN
-  url: https://www.dhin-hie.org
-  email: info@dhin-hie.org
+  name: NDHI
+  url: https://digitalhealth.gov.ng
+  email: emeka2015@gmail.com
 #dependencies:
 #  hl7.fhir.r4.core: 4.0.1
 
@@ -103,10 +103,10 @@ pages:
 # ContactDetail.
 #
 contact:
-  - name: Digital Health Interoperability Network.
+  - name: Nigeria Digital in Health Initiative.
     telecom:
       - system: email # phone | fax | email | pager | url | sms | other
-        value: info@dhin-hie.org
+        value: emeka2015@gmail.com
         use: work
         
 #jurisdiction: urn:iso:std:iso:3166#NG "Nigeria"        
