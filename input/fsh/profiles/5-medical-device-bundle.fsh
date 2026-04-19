@@ -138,9 +138,9 @@ InstanceOf: NgPatient
 Usage: #inline
 Title: "Lab Patient (Chem)"
 * meta.lastUpdated = "2025-11-06T08:30:00+01:00"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].value = "08030001111"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 * name.given[0] = "Kunle"
@@ -158,7 +158,7 @@ Instance: NgOrganization-Lab-001
 InstanceOf: NgOrganization
 Usage: #inline
 Title: "Plateau Specialist Hospital — Clinical Chemistry Lab"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "LAB-00981"
 * active = true
 * name = "Plateau Specialist Hospital Clinical Chemistry Lab"
@@ -224,9 +224,9 @@ InstanceOf: NgPatient
 Usage: #inline
 Title: "Wearable Patient - Bola Adeleke"
 * meta.lastUpdated = "2025-11-06T07:00:00+01:00"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].value = "08035556666"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 * name.given[0] = "Bola"
@@ -244,7 +244,7 @@ Instance: NgOrganization-AppVendor-001
 InstanceOf: NgOrganization
 Usage: #inline
 Title: "Wellness App Ltd."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-device-type-cs"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-device-type-cs"
 * identifier.value = "apple"
 * active = true
 * name = "Wellness App Ltd."
