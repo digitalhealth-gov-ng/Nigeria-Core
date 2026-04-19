@@ -3,7 +3,7 @@ Parent: ExplanationOfBenefit
 Id: ng-explanation-of-benefit
 Title: "NG ExplanationOfBenefit"
 Description: "A profile detailing adjudicated claim results."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-explanation-of-benefit"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-explanation-of-benefit"
 
 * status 1..1 MS
 * type 1..1 MS
