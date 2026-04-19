@@ -3,7 +3,7 @@ Parent: MeasureReport
 Id: ng-measure-report 
 Title: "NG MeasureReport"
 Description: "Nigeria Measure Report Profile"
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-measure-report"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-measure-report"
 
 
 * identifier.value 1..1 MS
@@ -44,7 +44,7 @@ InstanceOf: NgMeasureReport
 Usage: #example
 Title: "Example Ng MeasureReport (DispenseWithin48h)"
 Description: "Summary report of ePrescriptions dispensed within 48 hours."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value  = #HCF-12345
 * status = #complete
 * type = #summary
@@ -69,7 +69,7 @@ InstanceOf: NgMeasureReport
 Usage: #example
 Title: "Example Ng MeasureReport (CounselingDocumented)"
 Description: "Summary report of dispensing events with counseling documented."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value  = #HCF-12343
 * status = #complete
 * type = #summary
@@ -92,7 +92,7 @@ InstanceOf: NgMeasureReport
 Usage: #example
 Title: "Example Ng MeasureReport (ClaimApprovalRate)"
 Description: "Summary report of approved claims over all submitted claims."
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value  = #HCF-12344
 * status = #complete
 * type = #summary
