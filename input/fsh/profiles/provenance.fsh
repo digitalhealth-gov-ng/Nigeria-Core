@@ -5,8 +5,8 @@ Profile: NgProvenance
 Parent: Provenance
 Id: ng-provenance
 Title: "NG Lightweight Provenance"
-Description: "Minimal provenance profile for DHIN 2025 Connectathon. Captures who created/updated a resource, when, and (optionally) which activity was performed."
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-provenance"
+Description: "Minimal provenance profile for Nigeria Core. Captures who created/updated a resource, when, and (optionally) which activity was performed."
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-provenance"
 // Core constraints
 * target 1..* MS
 * target ^short = "The resource(s) for which this provenance record provides information"
@@ -16,7 +16,7 @@ Description: "Minimal provenance profile for DHIN 2025 Connectathon. Captures wh
 
 * activity 0..1 MS
 * activity ^short = "High-level activity (e.g., create/update/delete)"
-* activity from https://sandbox.dhin-hie.org/ig/ValueSet/ng-provenance-activity-vs (extensible)
+* activity from https://fhir-ig.digitalhealth.gov.ng/ValueSet/ng-provenance-activity-vs (extensible)
 
 * agent 1..* MS
 * agent ^short = "Actor(s) responsible for the activity"
@@ -45,7 +45,7 @@ Title: "Provenance for MNCH Referral Creation"
 Description: "Provenance indicating that a practitioner authored the MNCH referral request."
 * target[0] = Reference(NgServiceRequest-001)
 * recorded = "2025-10-02T09:35:00+01:00"
-* activity.coding[0].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/ng-provenance-activity-cs"
+* activity.coding[0].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/ng-provenance-activity-cs"
 * activity.coding[0].code = #CREATE
 * activity.coding[0].display = "create"
 * agent[0].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author "Author"
