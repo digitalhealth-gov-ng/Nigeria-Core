@@ -8,7 +8,7 @@ Title: "4-NG Immunization SMART Scheduler Bundle"
 Description: "A minimal transaction bundle to schedule an immunization visit with optional recommendations."
 
 * ^status = #active
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-imm-smart-scheduler-bundle"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-imm-smart-scheduler-bundle"
 
 // Bundle basics
 * type 1..1 MS
@@ -110,8 +110,8 @@ Usage: #inline
 Title: "Child – Terfa Dooshima"
 * meta.lastUpdated = "2025-11-06T08:10:00+01:00"
 * identifier[PhoneNumber].value = "08031234567"
-* identifier[PhoneNumber].system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
-* identifier[PhoneNumber].type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
+* identifier[PhoneNumber].type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/patient-identifier-cs"
 * identifier[PhoneNumber].type.coding.code = #MOBILE
 * identifier[PhoneNumber].type.coding.display = "mobile"
 * name.given[0] = "Terfa"
@@ -129,11 +129,11 @@ Instance: NgOrganization-IMMSS-001
 InstanceOf: NgOrganization
 Usage: #inline
 Title: "Apo Primary Health Centre"
-* identifier.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-registry"
+* identifier.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-registry"
 * identifier.value = "HCF-12346"
 * active = true
 * name = "Apo PHC"
-* type.coding.system = "https://sandbox.dhin-hie.org/ig/CodeSystem/nigeria-facility-type"
+* type.coding.system = "https://fhir-ig.digitalhealth.gov.ng/CodeSystem/nigeria-facility-type"
 * type.coding.code = #phc-center-l1
 * type.coding.display = "PHC Center Level 1"
 * telecom[0].system = #phone
