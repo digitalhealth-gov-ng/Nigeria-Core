@@ -4,7 +4,7 @@ Title: "NG Encounter"
 Id: ng-encounter 
 Description: "A profile for encounters in the Nigerian used to health visits and related healthcare interactions."
 * ^version = "1.0.0"
-* ^url = "https://sandbox.dhin-hie.org/ig/StructureDefinition/ng-encounter"
+* ^url = "https://fhir-ig.digitalhealth.gov.ng/StructureDefinition/ng-encounter"
 * ^status = #active
 * ^publisher = "DHIN"
 * status ^short = "Status of the encounter"
