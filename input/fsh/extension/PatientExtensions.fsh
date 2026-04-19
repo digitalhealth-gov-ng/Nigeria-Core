@@ -10,7 +10,7 @@ Description: "Captures the administrative ward within a geographic address "
 * ^context[0].type = #element
 * ^context[0].expression = "Address"
 * ^status = #active
-* ^publisher = "DHIN"
+* ^publisher = "NDHI"
 * value[x] only CodeableConcept
 * valueCodeableConcept from NGWardsVS (preferred)
 
