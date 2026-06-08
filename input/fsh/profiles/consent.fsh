@@ -43,7 +43,7 @@ Description: "Patient permits use/disclosure for treatment and payment for one y
 * scope = http://terminology.hl7.org/CodeSystem/consentscope#patient-privacy
 * category[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/consentcategorycodes"
 * category[0].coding[0].code = #emrgonly
-* category[0].coding[0].display = "Emergency Only Disclosure"
+* category[0].coding[0].display = "Emergency Only"
 * patient = Reference(NgPatient-Consent-001)
 * dateTime = "2025-10-21T10:00:00+01:00"
 //* performer[0] = Reference(NgOrganization-Consent-Org-001)

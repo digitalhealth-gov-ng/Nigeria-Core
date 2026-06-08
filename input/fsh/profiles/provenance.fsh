@@ -16,7 +16,7 @@ Description: "Minimal provenance profile for Nigeria Core. Captures who created/
 
 * activity 0..1 MS
 * activity ^short = "High-level activity (e.g., create/update/delete)"
-* activity from https://fhir-ig.digitalhealth.gov.ng/ValueSet/ng-provenance-activity-vs (extensible)
+//* activity from https://fhir-ig.digitalhealth.gov.ng/ValueSet/ng-provenance-activity-vs (extensible)
 
 * agent 1..* MS
 * agent ^short = "Actor(s) responsible for the activity"
