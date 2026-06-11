@@ -1,387 +1,177 @@
-# Nigeria Core FHIR Implementation Guide
 
-## Purpose
-The Nigeria Core Implementation Guide (IG) brings together multiple tracks under a single standards-based framework to demonstrate, test, and advance healthcare interoperability in Nigeria.  
-This FHIR IG leveraging HL7 FHIR R4 artifacts so systems can exchange health information seamlessly, securely, and in line with national and international best practices.
+### Introduction
 
----
+The Nigeria Core FHIR Implementation Guide defines the national foundation for FHIR-based interoperability across Nigeria’s health sector. It establishes a common set of minimum profiles, extensions, terminology bindings, identifiers, RESTful interactions, and implementation expectations that can be reused by national, state, programme, regulator, hospitals, and vendor systems.
 
-## Background
-Nigeria’s health information ecosystem is often fragmented and siloed. The [**Nigeria Digital in Health Initiative (NDHI)**](https://www.digitalhealth.gov.ng/) of the Federal Ministry of Health and Social Welfare (FMoHSW) in collaboration with other health and ICT agencies and regulators, EMR and EHR providers, software developers, insurers, and innovators use this IG to design and test practical standardized and interoperability solutions.  
-This IG documents the machine-readable artifacts, profiles, and value sets for the **Health Programes**:
+Nigeria Core is intended to serve as the common interoperability “floor” for digital health systems in Nigeria. It supports implementation across electronic medical record systems, community health information systems, registries, laboratory systems, pharmacy systems, insurance and claims platforms, logistics systems, analytics platforms, and health information exchange services.
 
-1. Health Insurance & Claims  
-2. eCHIS
-3. ePharmacy (ePrescription & eDispensing)  
-4. Immunization  
-5. Medical Devices Communication
-6. SON Standards and NDPC Regulation
-7. Registries (MDCN and PCN provider and Facility registries)
+This guide is developed under the overall digital health leadership of the Federal Ministry of Health and Social Welfare, the National Digital Health Architecture, and the Nigeria Digital in Health Initiative (NDHI). It is designed to support national priorities while recognising Nigeria’s decentralised and hybrid digital health architecture, where states, programmes, regulators, and service delivery platforms may operate distinct systems that must still exchange data using a common standards framework.
 
-Each track builds on program datasets, relevant regulatory frameworks, and stakeholder priorities—providing reference implementations for production systems.
+Nigeria Core provides the foundation for harmonising existing and future Nigerian FHIR implementation guides, including programme-specific and domain-specific guides for eCHIS, MNCH, HIV, TB, Malaria, Immunization, Family Planning, Health Logistics, ePharmacy, ePrescription, insurance and claims, medical devices, health workforce registries, facility registries, and shared health records.
 
----
+The Nigeria Core Implementation Guide is based on [FHIR Version R4](http://hl7.org/fhir/R4/). It defines the minimum constraints on FHIR resources to create Nigeria Core Profiles. The elements, extensions, vocabularies, identifiers, and value sets that SHALL or SHOULD be present are identified, and their expected use is described. It also documents minimum FHIR RESTful interactions for accessing and exchanging administrative, clinical, public health, regulatory, and programme data.
 
-## Scope of the FHIR Implementation Guide
-- Standardize **profiles, value sets, and extensions** for each program  
-- Enable **secure interoperable data exchange** across facilities, pharmacies, insurers, referral networks, immunization registries, and device platforms  
-- Support **decision-support, regulatory compliance, and real-time data exchange** through open APIs  
-- Provide artifacts for **testing and conformance validation** during and beyond the Connectathon
+Establishing a national baseline for FHIR implementation promotes interoperability, vendor alignment, standards-based procurement, conformance testing, and reuse across Nigeria’s health ecosystem. More specific implementation guides may add additional requirements for particular programmes, workflows, jurisdictions, or use cases, but they should build on Nigeria Core wherever applicable.
 
----
+There are two general ways to implement Nigeria Core:
 
-## Track Overviews
+**Profile Only Support:** Systems may support Nigeria Core Profiles to represent clinical, administrative, registry, regulatory, or programme information in a consistent structure.
 
-### 1) Health Insurance & Claims
-- **Purpose:** Digitize and streamline eligibility, pre-auth, billing, and reimbursement  
-- **Key FHIR Artifacts:** [`NgCoverage`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-claim-coverage.html), `CoverageEligibilityRequest/Response`, [`NgClaim`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-claim.html), [`NgClaimResponse`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-claimresponse.html), [`NgInvoice`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-invoice.html), [`NgExplanationOfBenefit`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-explanationofbenefit.html)  
-- **Sample Bundles:** Eligibility Check, Pre-Auth, Claim Submission
+**Profile Support + Interaction Support:** Systems may support both the Nigeria Core Profile content structure and the RESTful interactions defined for a resource.
 
-### 2) MNCH Referral
-- **Purpose:** Structured, traceable referrals for MNCH services  
-- **Key Artifacts:** [`NgServiceRequest`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-NgServiceRequest.html), [`NgTask`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-NgTask.html), [`NgCarePlan`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-NgCarePlan.html)  
-- **Sample Bundles:** Referral Initiation, Referral Response, Referral Tracking
+For a detailed description of these different usages of Nigeria Core, see the [Conformance Requirements](conformance.html) page.
 
-### 3) ePharmacy (ePrescription & eDispensing)
-- **Purpose:** Standardize prescribing, dispensing, and pharmacy confirmations  
-- **Key Artifacts:** [`Medication`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-medication.html), [`MedicationRequest`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-medication-request.html), [`MedicationDispense`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-NgMedicationDispense.html), [`Invoice`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-invoice.html)  
-- **Sample Bundles:** Prescription, Dispense Confirmation
+### Background
 
-### 4) Immunization
-- **Purpose:** Digitize vaccine scheduling, administration, AEFI reporting  
-- **Key Artifacts:** [`Immunization`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-NgImmunization.html), [`ImmunizationRecommendation`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-immunization-recommendation.html), [`Appointment`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-appointment.html), [`Encounter`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-nigeria-encounter.html), [`Observation`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-NgObservation.html)  
-- **Sample Bundles:** Client Registration, SMART Scheduler, AEFI Report
+Nigeria’s health sector includes a diverse and growing digital health ecosystem, with systems deployed by federal institutions, state governments, health programmes, regulators, donors, development partners, private providers, innovators, and vendors. These systems support service delivery, reporting, supply chain, health workforce management, facility management, claims processing, public health surveillance, and patient care.
 
-### 5) Medical Devices Communication
-- **Purpose:** Integrate connected devices (e.g., analyzers, wearables) with records  
-- **Key Artifacts:** [`Device`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-NgDevice.html), [`DeviceRequest`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-NgDeviceRequest.html), [`Observation`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-NgObservation.html), [`NgTask`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-NgTask.html), [`Provenance`](https://build.fhir.org/ig/Nigeria-FHIR-Community/2025Connectathon/StructureDefinition-ng-provenance.html)  
-- **Sample Bundles:** Device Result Submission, Wearable Data Upload
+Historically, many of these systems have been developed around programme-specific requirements, resulting in variation in data models, identifiers, terminology, reporting formats, and integration methods. Nigeria Core responds to this challenge by defining a common national FHIR-based foundation for health data exchange.
 
----
+The guide is informed by Nigeria’s digital health policy direction, the National Digital Health Architecture, national health data standards work, existing FHIR implementation guide efforts, the Nigeria FHIR Community, DHIN Connectathon activities, standards work with the Standards Organisation of Nigeria, and lessons from implementation across priority health programmes.
 
-## Interactions Between Priority Systems
-- **Clinical Systems (EMRs/EHRs):** referrals, immunization, eRx  
-- **Pharmacy Systems:** ePrescription receive/dispense and billing  
-- **Insurance Systems:** coverage checks, adjudication, payment  
-- **Medical Devices:** observations to clinical records  
-- **Regulators:** provider registries, audits, compliance  
-- **Patients:** mobile access, consent, feedback
+Nigeria Core also supports the development of a Nigeria Shared Health Record, aligned where appropriate with the International Patient Summary, and enables interoperability with national and sub-national building blocks such as:
 
-All exchanges are defined via **FHIR R4 profiles and conformance statements** in this IG.
+* Client and patient registries
+* Health Facility Registry
+* Health Workforce Registry
+* Terminology services
+* Consent and privacy services
+* Provider and regulator registries
+* Programme repositories
+* Health information exchange platforms
+* Conformance testing and sandbox environments
 
----
+The guide is expected to evolve through formal standards development, stakeholder review, testing, and endorsement processes. Future releases will incorporate additional profiles, terminology mappings, implementation guidance, programme-specific artefacts, and lessons from vendor testing and real-world implementation.
 
-## Acronyms
+### How To Read This Guide
 
-| Acronym | Meaning |
-|---|---|
-| NDHI | Nigeria Digital in Health Initiative |
-| SMART | Standards-based, Machine-readable, Adaptable, Requirements-based, Testable |
+This guide is divided into several pages, which are listed at the top of each page in the menu bar.
 
----
+**[Home](index.html):** The home page provides the introduction and background for Nigeria Core.
 
-## Connectathon TestScripts (Nine Tracks)
+**[Conformance](conformance.html):** These pages describe the rules for claiming conformance to this guide.
 
-> **Conventions**
-> - Prefer **URN UUIDs** for intra-bundle references (e.g., `urn:uuid:...`)  
-> - Use IG profiles: `NgPatient`, `NgPractitioner`, `NgProviderOrganization`, `NgPharmacyOrganization`, `NgInsurerOrganization`, etc.  
-> - **Transaction** bundles must include `entry.request.method` + `entry.request.url` per entry  
-> - Keep examples minimal; warnings are acceptable, **errors are not**
+* **[General Requirements](general.html):** Defines requirements common to all actors and profiles used in this guide, including how CapabilityStatements are used to claim conformance.
+* **[Must Support](must-support.html):** Defines expectations for mandatory and Must Support elements in Nigeria Core Profiles.
+* **[Security](security.html):** Documents general security, privacy, consent, and access control requirements and recommendations for actors.
 
----
+**[Guidance](guidance.html):** The Guidance pages document best practices and how to use the profiles and transactions defined in this guide.
 
-### TestScript 1 — CLAIMS & INSURANCE
-**Scenarios:** (i) Eligibility Check, (ii) Pre-Authorization, (iii) Submission & Billing
+* **[Program Guidance](program.html):** Provides guidance on how national and sub-national programmes should extend or specialise Nigeria Core for programme-specific use cases.
+* **[Clinical Notes](clinical-notes.html):** Provides guidance on representing and exchanging clinical notes and narrative clinical information.
+* **[Medication Management](medication-management.html):** Provides guidance on medication lists, prescriptions, dispensing, fulfilment, and pharmacy-related workflows.
+* **[Relationship With Other IGs](other-igs.html):** Describes the relationship between Nigeria Core and other implementation guides, including programme-specific Nigerian IGs, IPS, IPA, US Core, and other reusable FHIR guides.
 
-**Story (summary):**  
-“Did you know your hospital bill can travel faster than you can say *‘where is my receipt?’*” In Port Harcourt, night-shift injury becomes a same-day greenlight as the ER nurse runs a digital eligibility check, the clinician requests pre-auth on a tablet, and the cashier submits billing with clean links. A duplicate X-ray is auto-flagged; context is supplied, and approval follows—no phone-tag, no wahala.
+**[FHIR Artifacts](artifacts.html):** These pages provide detailed descriptions and formal definitions for the FHIR objects defined in this guide.
 
-**Prerequisites**  
-- Profiles installed; shared identifier namespaces  
-- Minimal examples prepared for: `NgPatient`, `NgPractitioner`, `NgProviderOrganization`, `NgInsurerOrganization`, `NgCoverage`, `NgCoverageEligibilityRequest/Response`, `NgClaim`, `NgClaimResponse`, `NgInvoice`, `ExplanationOfBenefit`
+* **[Profiles and Extensions](profiles.html):** Lists the Nigeria Core Profiles and Extensions defined in this guide.
+* **[Search Parameters and Operations](search-operations.html):** Lists the defined Nigeria Core Operations and Search Parameters used in Nigeria Core transactions.
+* **[Terminology](terminology.html):** Lists Nigeria Core ValueSets and CodeSystems defined for the profiles.
+* **[Capability Statements](capability-statements-api.html):** Defines the expected FHIR capabilities of Nigeria Core Servers and Clients.
+* **[Examples](examples.html):** Lists examples used in this guide. {% include examples.md -%}
+* **[Downloads](downloads.html):** Provides links to downloadable artefacts.
 
-**Steps**  
-A) **Eligibility Check**  
-1. POST `NgEligibilityCheck-Request` (transaction): Patient, Provider Practitioner, Provider Org, `CoverageEligibilityRequest`  
-2. Expect `NgEligibilityCheck-Response` (collection): `Coverage`, `CoverageEligibilityResponse`
+**[Version History](change-logs.html#versions):** These pages document changes across versions of Nigeria Core.
 
-B) **Pre-Authorization**  
-3. POST `NgPreAuthorizationBundle` (transaction): Patient, Provider & Insurer Orgs, Coverage, `Claim(use=preauthorization)`  
-4. Expect `NgPreAuthorizationBundle` (collection): `ClaimResponse` decision
+* **[Change Log](change-log.html):** Lists updates, enhancements, clarifications, corrections, and changes arising from community feedback, programme alignment, testing, and standards review.
+* **[Changes Between Versions](change-logs.html#versioning):** Documents changes between Nigeria Core versions and considerations when transitioning across versions.
+* **[Roadmap](roadmap.html):** Provides a preview of future direction, including additional profiles, programme guides, terminology mappings, conformance testing requirements, and sandbox-based validation.
 
-C) **Submission & Billing**  
-5. POST `NgClaim(use=claim)` + optional `NgInvoice`  
-6. Expect `ExplanationOfBenefit` (payer result)
+### Nigeria Core Actors
 
-**Expected Outcomes**  
-- Eligibility outcome present (`inforce=true`)  
-- Pre-auth decision returned (`ClaimResponse`) linked to originating `Claim`  
-- EOB references submitted `Claim`; totals reconcile with Invoice (if present)
+The following actors are part of the Nigeria Core Implementation Guide:
 
-**Validation**  
-- Bundle.type correct; all references resolve  
-- `Claim.use` values correct across phases  
-- `entry.request.*` present for transactions
+#### Nigeria Core Requestor
 
-**Evidence**  
-- Request/Response JSON + validator output (0 errors)
+A Nigeria Core Requestor is an application, system, service, or platform that initiates a data access or data exchange request. The Requestor is the Client in a FHIR Client-Server interaction.
 
-**Pitfalls**  
-- Missing `entry.request.url` in transactions  
-- `Invoice.lineItem.chargeItem[x]` absent (must include `chargeItemReference` or `chargeItemCodeableConcept`)
+Examples of Nigeria Core Requestors include EMR systems, community health applications, mobile health applications, analytics platforms, claims systems, laboratory systems, pharmacy platforms, state health information systems, regulator portals, and public health reporting tools.
 
----
+The terms **Nigeria Core Requestor** and **Client** are used interchangeably throughout this guide.
 
-### TestScript 2 — ePHARMACY (ePrescription & eDispensing)
+#### Nigeria Core Responder
 
-**Story (summary):**  
-“In Kano, a patient fills chronic meds without drama.” The pharmacy receives three medication requests, dispenses exact quantities, attaches counseling notes, and issues a simple invoice; payer or patient can later verify line items by dispense references.
+A Nigeria Core Responder is a system, service, platform, or repository that responds to a data access or exchange request by providing FHIR-conformant data. The Responder is the Server in a FHIR Client-Server interaction.
 
-**Prerequisites**  
-- `NgPatient`, `NgPractitioner` (prescriber & dispenser), `NgPharmacyOrganization`  
-- `NgMedication` ×3, `NgMedicationRequest` ×3  
-- Response examples: `NgMedicationDispense` ×3, `NgInvoice` (optional)
+Examples of Nigeria Core Responders include EMRs, health information exchanges, shared health record platforms, health facility registries, health workforce registries, terminology servers, programme repositories, insurance platforms, pharmacy systems, and public health data platforms.
 
-**Steps**  
-1. POST **Prescription Bundle** (transaction): Patient, Prescriber, Pharmacy, Medications, MedicationRequests  
-2. POST **Dispense Bundle** (collection): Patient, Pharmacy, Medications, MedicationDispense ×N, optional `NgInvoice`
+The terms **Nigeria Core Responder** and **Server** are used interchangeably throughout this guide.
 
-**Expected Outcomes**  
-- `MedicationDispense.authorizingPrescription` links to the right `MedicationRequest`  
-- Invoice `lineItem` references dispenses (or uses codeable concepts)
+#### Nigeria Core Registry Service
 
-**Validation**  
-- Dose/timing present; route present  
-- For invoice: at least one `lineItem.chargeItemReference` **or** `chargeItemCodeableConcept`
+A Nigeria Core Registry Service is a system that maintains authoritative or reference information about entities such as patients, facilities, health workers, providers, organisations, products, or regulated services.
 
-**Evidence**  
-- Request/Response JSON + validator results
+Registry services may be hosted by federal institutions, state governments, regulators, or designated national platforms. Examples include the Health Facility Registry, Health Workforce Registry, professional council registers, facility licensing systems, and related master data services.
 
-**Pitfalls**  
-- Missing dispense linkage to medicationRequest  
-- Invoice line items lacking a charge item
+#### Nigeria Core Terminology Service
 
----
+A Nigeria Core Terminology Service provides access to CodeSystems, ValueSets, ConceptMaps, and terminology mappings used for national interoperability. These may include Nigerian local codes and mappings to international terminologies such as ICD-11, SNOMED CT, LOINC, ATC, and other applicable standards.
 
-### TestScript 3 — MNCH REFERRAL
+#### Nigeria Core Conformance and Sandbox Service
 
-**Story (summary):**  
-“In Lafia, a PHC midwife escalates an ANC case with blood-pressure red flags.” A `ServiceRequest` and initial `Task` notify a secondary hospital; response updates `Task.status`, and tracking confirms arrival and completion—no missed calls, no lost papers.
+A Nigeria Core Conformance and Sandbox Service supports validation, testing, certification readiness, and implementation support for systems claiming conformance to this guide. It may include FHIR validation services, test data, reference servers, example transactions, Inferno-style tests, HAPI FHIR servers, and vendor onboarding workflows.
 
-**Prerequisites**  
-- `NgPatient`, `NgPractitioner`, `NgProviderOrganization` (PHC & hospital)  
-- `NgServiceRequest`, `NgTask`, optional `Communication`
+### Nigeria Core Profiles
 
-**Steps**  
-1. POST **Referral Initiation** (transaction): Patient, ServiceRequest, Practitioner, Task (`ready`)  
-2. Expect **Referral Response** (collection): Task accepted/assigned  
-3. POST **Referral Tracking** updates (collection): Task `in-progress` → `completed`
+Nigeria Core Profiles define the minimum constraints required to represent core health, administrative, registry, regulatory, and programme information in Nigeria. Each profile identifies the core elements, extensions, vocabularies, identifiers, and ValueSets that SHALL, SHOULD, or MAY be present when using the profile.
 
-**Expected Outcomes**  
-- `Task.for` → Patient; `Task.owner` → receiving facility  
-- `Task.basedOn` → ServiceRequest
+Together, these profiles promote interoperability and adoption through common implementation. They provide a national baseline for more specific implementation guides and use cases.
 
-**Validation**  
-- Status transitions valid (`requested/ready` → `accepted` → `in-progress/completed`)  
-- All references resolve
+A narrative summary on each profile page describes the profile’s purpose, requirements, Must Support elements, terminology bindings, examples, and implementation guidance. A formal hierarchical table presents the logical view of the content in both differential and snapshot views and provides links to related terminologies and examples.
 
-**Evidence**  
-- Bundle JSONs + Task state changes
 
-**Pitfalls**  
-- Missing `Task.basedOn` link to ServiceRequest
 
----
+### Nigeria Core FHIR RESTful Interactions
 
-### TestScript 4 — IMMUNIZATION (SMART Scheduler & AEFI)
+For systems that support both Nigeria Core Profile content and RESTful interactions, requirements are formally defined in Nigeria Core CapabilityStatements. In addition, each profile page may include a Quick Start section that documents required or recommended FHIR RESTful search, read, create, update, and operation interactions.
 
-**Story (summary):**  
-“In Aba, a caregiver books a measles shot and later flags a mild fever.” A minimal scheduler suggests dates via `ImmunizationRecommendation` and `Appointment`; a separate AEFI report captures `Immunization` context and an `Observation` for symptoms.
+These interactions demonstrate how systems can access and exchange patient, provider, facility, clinical, medication, immunization, referral, claims, logistics, registry, and programme data using standard FHIR APIs.
 
-**Prerequisites**  
-- Scheduler: `NgPatient`, `NgImmunizationRecommendation`, `NgAppointment`, `NgLocation`  
-- AEFI: `NgPatient`, `NgPractitioner`, `NgOrganization`, `Encounter`, `Immunization`, `Observation`
 
-**Steps**  
-A) **Scheduler**  
-1. POST Scheduler bundle (collection): Recommendation + Appointment + Location  
-B) **AEFI Report**  
-2. POST AEFI bundle (collection): Encounter, Immunization, Observation (adverse event)
+Implementers should refer to the FHIR specification for details on the [FHIR RESTful API](http://hl7.org/fhir/R4/http.html), [FHIR Search](http://hl7.org/fhir/R4/search.html), and applicable security and authorization patterns such as SMART App Launch and OAuth2-based access control.
 
-**Expected Outcomes**  
-- Appointment date/time matches recommended window  
-- AEFI `Observation.effective[x]` and linkage to `Immunization` present
+### Relationship to Programme and Domain Implementation Guides
 
-**Validation**  
-- Reason codes present where applicable  
-- Subject and performer references resolve
+Nigeria Core is intended to be reused by programme-specific and domain-specific implementation guides. These guides may add constraints, examples, workflows, terminology bindings, and exchange patterns for particular use cases while maintaining alignment with Nigeria Core.
 
-**Evidence**  
-- Bundle JSON + validator logs
+Examples of implementation areas expected to build on Nigeria Core include:
 
-**Pitfalls**  
-- Missing link from AEFI Observation to Immunization
+* Electronic Medical Records and Electronic Health Records
+* eCHIS and community health workflows
+* Maternal, Newborn and Child Health
+* Immunization
+* HIV
+* Tuberculosis
+* Malaria
+* Family Planning
+* Nutrition
+* Health logistics and supply chain
+* ePharmacy and ePrescription
+* Insurance, claims, and payer workflows
+* Medical devices and diagnostic systems
+* Facility registry workflows
+* Health workforce registry workflows
+* Shared health records and longitudinal patient records
+* Public health reporting and analytics
 
----
+Programme guides should reuse Nigeria Core profiles and terminology where possible. Where additional constraints are required, they should be documented as derived profiles or extensions, with clear conformance expectations.
 
-### TestScript 5 — MEDICAL DEVICES (Analyzer Result & Wearable Upload)
+### Standards, Governance, and Conformance
 
-**Story (summary):**  
-“In Jos, a chemistry analyzer posts serum glucose; in Lagos, a student’s Apple Watch streams heart rate.” Two simple device flows push `Observation` to a FHIR endpoint with device attribution.
+Nigeria Core supports a standards-based approach to digital health governance in Nigeria. It is intended to align implementation with national health sector leadership, formal standards development processes, and conformance testing.
 
-**Prerequisites**  
-- `NgPatient`, `NgOrganization` (performer), `NgDevice` (analyzer / watch)  
-- Analyzer: optional `DeviceMetric`, `Task`; Wearable: mobile app as data source
+The guide supports:
 
-**Steps**  
-A) **Chemistry Analyzer**  
-1. POST bundle (collection): Patient, Organization, Device, Observation (glucose)  
-B) **Apple Watch**  
-2. POST bundle (collection): Patient, Organization (app vendor/clinic), Device, Observation (heart rate)
+* Harmonisation of existing health data standards into a national FHIR framework
+* Reuse of international standards where appropriate
+* Mapping of Nigerian terminology and identifiers to recognised global standards
+* Vendor testing through sandbox environments
+* Conformance readiness for procurement and implementation
+* Progressive national endorsement through relevant governance and standards bodies
+* Alignment between federal, state, programme, and regulator systems
 
-**Expected Outcomes**  
-- `Observation.device` → Device; `Observation.subject` → Patient  
-- Units present (e.g., mmol/L, bpm)
+Nigeria Core will continue to evolve through stakeholder engagement, technical working groups, Connectathons, implementation feedback, and testing in real-world settings.
 
-**Validation**  
-- UCUM codes for units where possible  
-- Effective times present and recent
+### Primary Authors
 
-**Evidence**  
-- Observation JSONs + validator results
-
-**Pitfalls**  
-- Missing units or using free text
-
----
-
-### TestScript 6 — MDCN USE CASE (Practitioner Registry)
-
-**Story (summary):**  
-“In Enugu, a hospital HR verifies a locum doctor before shift.” A practitioner is created/queried against MDCN ID to prevent impersonation and ensure licensure validity.
-
-**Prerequisites**  
-- `NgPractitioner` profile; MDCN identifier system agreed
-
-**Steps**  
-1. POST `NgPractitioner` with MDCN ID  
-2. GET `/Practitioner?identifier=<system>|<value>`
-
-**Expected Outcomes**  
-- 201 on create; search returns exact match with correct status
-
-**Validation**  
-- Identifier system/code correct; `active = true`
-
-**Evidence**  
-- POST/GET payloads + logs
-
-**Pitfalls**  
-- Wrong identifier namespace; inactive practitioner used in tests
-
----
-
-### TestScript 7 — PCN USE CASE (Pharmacy Registry)
-
-**Story (summary):**  
-“In Abeokuta, a neon sign is not a license.” A community pharmacy publishes `NgPharmacyOrganization` with PCN number; citizens and HMOs verify registration by identifier. Unlicensed “chemist” shops are filtered out.
-
-**Prerequisites**  
-- `NgPharmacyOrganization` profile; PCN identifier system agreed
-
-**Steps**  
-1. POST `NgPharmacyOrganization` (active = true; type = pharmacy; PCN identifier)  
-2. GET `/Organization?identifier=<system>|<value>`
-
-**Expected Outcomes**  
-- Organization retrievable by identifier; type coding present
-
-**Validation**  
-- Address/telecom present; canonical org-type used
-
-**Evidence**  
-- POST/GET JSON + logs
-
-**Pitfalls**  
-- Non-canonical org-type; missing identifier
-
----
-
-### TestScript 8 — SON USE CASE (Standards & Consent/Pseudonymization)
-
-**Story (summary):**  
-“In Kaduna, a facility implements consent and pseudonymization to share data safely.” A simple consent is recorded; separately, a patient/practitioner/related-person example is pseudonymized for a privacy-preserving flow.
-
-**Prerequisites**  
-- `NgConsent` profile + example  
-- Pseudonymized `NgPatient`, `NgPractitioner`, `NgRelatedPerson` (consistent tokenization domain)
-
-**Steps**  
-1. POST `NgConsent` (opt-in/opt-out per scenario)  
-2. POST pseudonymized Patient/Practitioner/RelatedPerson resources
-
-**Expected Outcomes**  
-- Consent discoverable and linked to subject  
-- Pseudonymized identifiers consistent across resources
-
-**Validation**  
-- `Consent.provision.type` set appropriately  
-- No direct identifiers in pseudonymized resources
-
-**Evidence**  
-- JSON resources + validator logs
-
-**Pitfalls**  
-- Mixing real PHI into pseudonymized examples; inconsistent pseudonyms
-
----
-
-### TestScript 9 — PRIVACY USE CASE (Applied Pseudonymization)
-
-**Story (summary):**  
-“In Uyo, a research extract replaces direct identifiers with tokens while preserving clinical utility.” The dataset keeps dates within policy (e.g., month/year only) and retains linkability across encounters with a stable pseudonym.
-
-**Prerequisites**  
-- Clear policy for tokenization, date handling, and quasi-identifiers  
-- Pseudonymization function documented (salted/HMAC or equivalent)
-
-**Steps**  
-1. Transform Patient/Practitioner/RelatedPerson to pseudonymized variants  
-2. POST transformed resources  
-3. Run sample query chains to confirm linkability (same pseudonym across resources)
-
-**Expected Outcomes**  
-- No direct identifiers present  
-- Queries still correlate patient across resources
-
-**Validation**  
-- Pseudonym fields consistent; addresses generalized where required
-
-**Evidence**  
-- Before/after examples; pseudonymization method note
-
-**Pitfalls**  
-- Reversible tokens without controls; leaking rare combinations (re-identification risk)
-
----
-
-## General Validation & Logistics
-
-- **Transport:** Use HTTPS endpoints; include `Content-Type: application/fhir+json`  
-- **Bundle Hygiene:**  
-  - `transaction` ⇒ each entry has `request.method` + `request.url`  
-  - `collection` ⇒ omit `entry.request`  
-  - Prefer `urn:uuid:` in `fullUrl` and internal references  
-- **Coding:** Use official code systems (THO/HL7, UCUM). Keep custom code systems under your canonical  
-- **Evidence Pack:** Submit request/response JSON, validator reports, and brief screenshots as needed  
-- **Passing Criteria:** No **errors** in validation; warnings acceptable if justified in notes
-
----
-
-## Appendix — Quick Tips
-
-- **Invoices:** Each `Invoice.lineItem` must carry **either** `chargeItemReference` (e.g., a `MedicationDispense`/`Procedure`) **or** `chargeItemCodeableConcept`.  
-- **Claims:** Keep `Claim.use` appropriate to phase (`preauthorization` vs `claim`).  
-- **Devices:** Always include measurement units (UCUM).  
-- **Privacy:** When in doubt, **pseudonymize** and briefly document how.  
-- **Troubleshooting:** If references don’t resolve, check `fullUrl` vs local `Reference(target-id)` and slice constraints in your bundle profile.
+Emeka Chukwu, Leke Ojewale

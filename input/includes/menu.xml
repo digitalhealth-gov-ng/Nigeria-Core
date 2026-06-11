@@ -1,7 +1,76 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav"> 
-  <li> <a href="index.html" class="dropdown-toggle">Home</a></li> 
-  <li ><a href="artifacts.html">FHIR Artifacts</a></li>
-  <li ><a href="privacy-security.html">Privacy and Security</a></li>
+  <li>
+    <a href="index.html">Home</a>
+  </li>
 
-</ul>  
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+      Conformance <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="general.html">General Requirements</a></li>
+      <li><a href="must-support.html">Must Support</a></li>
+      <li><a href="security.html">Security</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+      Guidance <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="program.html">Program Guidance</a></li>
+      <li><a href="clinical-notes.html">Clinical Notes</a></li>
+      <li><a href="medication-management.html">Medication Management</a></li>
+      <li><a href="provenance.html">Basic Provenance</a></li>
+      <li><a href="nhmis.html">Relationship with NHMIS</a></li>
+      <li><a href="registries.html">Registries &amp; Shared Services</a></li>
+      <li><a href="other-igs.html">Relationship with Other IGs</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+      Priority Logical Models <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="hiv.html">HIV</a></li>
+      <li><a href="tb.html">TB</a></li>
+      <li><a href="malaria.html">Malaria</a></li>
+      <li><a href="echis.html">Community Health</a></li>
+      <li><a href="mnch.html">MNCH</a></li>
+      <li><a href="immunization.html">Immunization</a></li>
+      <li><a href="referral.html">Referral</a></li>
+      <li><a href="laboratory-imaging.html">Laboratory &amp; Imaging</a></li>
+      <li><a href="reports.html">Reporting &amp; Analytics</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+      FHIR Artefacts <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="ng-ps.html">NG Patient Summary</a></li>
+      <li><a href="search-operations.html">Search &amp; Operations</a></li>
+      <li><a href="terminology.html">Terminology</a></li>
+      <li><a href="capability-statements-api.html">Capability Statements &amp; API</a></li>
+      <li><a href="api-exchange.html">API &amp; Swagger</a></li>
+      <li><a href="examples.html">Examples</a></li>
+      <li><a href="artifacts.html">All FHIR Artefacts</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+      Downloads &amp; Change Logs <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="change-logs.html">Change Logs &amp; Versioning</a></li>
+      <li><a href="roadmap.html">Roadmap</a></li>
+    </ul>
+  </li>
+
+</ul>

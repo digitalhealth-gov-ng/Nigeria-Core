@@ -5,66 +5,82 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ng.gov.digitalhealth.fhir-ig
 canonical: https://fhir-ig.digitalhealth.gov.ng
-name: Nigeria Core
+name: NigeriaCore
 title: Nigeria Core - FHIR Implementation Guide 
-description: Implementation guide for standards and interoperability of the Nigeria digital health system
+description: The Nigeria Core Implementation Guide defines the minimum set of FHIR RESTful interactions for each of the Nigeria Core Profiles to access patient data. The Profiles are updated monthly to support the latest requirements from The Nigeria Digital in Health Initiative under Sector Wide Approach (SWaP) for Health Information in Nigeria.
 status: draft # draft | active | retired | unknown
 version: 0.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 206+
+copyrightYear: 2026+
 releaseLabel: draft
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 
 jurisdiction: urn:iso:std:iso:3166#NG "Nigeria"
+date: 2026-06-01
 publisher:
   name: NDHI
   url: https://digitalhealth.gov.ng
   email: emeka2015@gmail.com
-#dependencies:
-#  hl7.fhir.r4.core: 4.0.1
 
-# The dependencies property corresponds to IG.dependsOn. The key is the
-# package id and the value is the version (or dev/current). For advanced
-# use cases, the value can be an object with keys for id, uri, and version.
-#
-# dependencies:
-#   hl7.fhir.us.core: 3.1.0
-#   hl7.fhir.us.mcode:
-#     id: mcode
-#     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
-#     version: 1.0.0
-#
-#
-# The pages property corresponds to IG.definition.page. SUSHI can
-# auto-generate the page list, but if the author includes pages in
-# this file, it is assumed that the author will fully manage the
-# pages section and SUSHI will not generate any page entries.
-# The page file name is used as the key. If title is not provided,
-# then the title will be generated from the file name.  If a
-# generation value is not provided, it will be inferred from the
-# file name extension.  Any subproperties that are valid filenames
-# with supported extensions (e.g., .md/.xml) will be treated as
-# sub-pages.
-#
+
 pages:
   index.md:
     title: Home
-  privacy-security.md:
-    title: Privacy and Security
+  general.md:
+    title: General Requirements
+  must-support.md:
+    title: Must Support
+  security.md:
+    title: Security
+  program.md:
+    title: Program Guidance
+  clinical-notes.md:
+    title: Clinical Notes
+  medication-management.md:
+    title: Medication Management
+  provenance.md:
+    title: Basic Provenance
+  nhmis.md:
+    title: Relationship with NHMIS-DHIS2
+  registries.md:
+    title: Registries & Shared Services
+  other-igs.md:
+    title: Relationship with other IGs
+  hiv.md:
+    title: HIV
+  tb.md:
+    title: TB
+  malaria.md:
+    title: Malaria
+  echis.md:
+    title: Community Health
+  mnch.md:
+    title: MNCH
+  immunization.md:
+    title: Immunization
+  referral.md:
+    title: Referral
+  laboratory-imaging.md:
+    title: Laboratory-Imaging
+  reports.md:
+    title: Reporting & Aalytics
+  ng-ps.md:
+    title: NG Patient Summary
+  search-operations.md:
+    title: Search & Operations
+  terminology.md:
+    title: Terminology
+  capability-statement-api.md:
+    title: Capability Statement & API
+  examples.md:
+    title: Examples
+  downloads.md:
+    title: Downloads
+  change-logs.md:
+    title: Change Logs & Versioning
+  roadmap.md:
+    title: Roadmap
 
-# dependancies.md:
-#   title: Dependancies
-# concepts.md:
-#    title: Concepts
-# The parameters property represents IG.definition.parameter. Rather
-# than a list of code/value pairs (as in the ImplementationGuide
-# resource), the code is the YAML key. If a parameter allows repeating
-# values, the value in the YAML should be a sequence/array.
-# For parameters defined by core FHIR see:
-# http://build.fhir.org/codesystem-guide-parameter-code.html
-# For parameters defined by the FHIR Tools IG see:
-# http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
-#
 # parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
@@ -77,105 +93,69 @@ pages:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 # menu:
 #   Home: index.html
-#   Artifacts: 
-#     Profiles: artifacts.html
-#     Extensions: artifacts.html
-#     Value Sets: artifacts.html
-#     Code System: artifacts.html
-#   Support:
-#     FHIR Spec: http://hl7.org/fhir/R4/index.html
-#     Downloads: downloads.html
-#     Dependencies: dependency-table.html  # Add this
-#     Globals: globals-table.html          # Add this
-#     IP Statements: ip-statements.html    # Add this
+#   Conformance: #conformance.html
+#       General Requirements: general.html
+#       Must Support: must-support.html
+#       Security: security.html
+#   Guidance: #guidance.html
+#       Program Guidance: uscdi.html
+#       Clinical Notes: clinical-notes.html
+#       Medication Management: medication-management.html
+#       Basic Provenance: provenance.html
+#       Relationship with NHMIS: nhmis.html
+#       Registires: registries.html
+#       Relationship With Other IGs: other-igs.html
+
+#   Priority Logical Models: #logical-models.html
+#       HIS: hiv.html
+#       TB: tb.html
+#       Malaria: malaria.html
+#       Community Health: echis.html
+#       Immunization: immunization.html
+#       Referral: referral.html
+#       Laboratory & Imaging: laboratory-imaging.html
+#       Reporting & Analytics: reports.html
+
+#   FHIR Artifacts: #artifact.html
+#       NG Patient Summary: ng-ps.html
+#       Search Parameters & Operations: search-operations.html
+#       Terminology: terminology.html
+#       Capability Statements & API: capability-statements.html
+#       API & Swagger Docs: api-exchange.html
+#       Extensions: profiles-and-extensions.html#extensions
+#       Examples: examples.html
+#       All FHIR Artefacts: artifacts.html
+
+#   Downloads & Change Logs: #downloads-changelogs.html
+#       Downloads: downloads.html
+#       Change Log & Versioning: changes-logs.html
+#       Roadmap: roadmap.html
 
 
 
-# ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
-# │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
-# │  resource. These properties are less commonly needed than those above.                         │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-#
-# Those who need more control or want to add additional details to the contact values can use
-# contact directly and follow the format outlined in the ImplementationGuide resource and
-# ContactDetail.
-#
 contact:
+  - name: Nigeria Digital in Health Initiative.
+    telecom:
+      - system: email # phone | fax | email | pager | url | sms | other
+        value: lekeojewale@gmail.com
+        use: work
   - name: Nigeria Digital in Health Initiative.
     telecom:
       - system: email # phone | fax | email | pager | url | sms | other
         value: emeka2015@gmail.com
         use: work
         
-#jurisdiction: urn:iso:std:iso:3166#NG "Nigeria"        
-#
 
-#
-# groups:
-#   GroupA:
-#     name: Group A
-#     description: The Alpha Group
-#     resources:
-#     - StructureDefinition/animal-patient
-#     - StructureDefinition/arm-procedure
-#   GroupB:
-#     name: Group B
-#     description: The Beta Group
-#     resources:
-#     - StructureDefinition/bark-control
-#     - StructureDefinition/bee-sting
-#
-#
-# The ImplementationGuide resource defines several other properties
-# not represented above. These properties can be used as-is and
-# should follow the format defined in ImplementationGuide:
-# * date
-# * meta
-# * implicitRules
-# * language
-# * text
-# * contained
-# * extension
-# * modifierExtension
-# * experimental
-# * useContext
-# * copyright
-# * packageId
-#
-#
-# ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
-# │  The flags below configure aspects of how SUSHI processes FSH.                                 │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# The FSHOnly flag indicates if only FSH resources should be exported.
-# If set to true, no IG related content will be generated.
-# The default value for this property is false.
-#
-# FSHOnly: false
-#
-#
-# When set to true, the "short" and "definition" field on the root element of an Extension will
-# be set to the "Title" and "Description" of that Extension. Default is true.
-#
-# applyExtensionMetadataToRoot: true
-#
-#
-# The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
-# See the individual option definitions below for more detail.
-#
 instanceOptions:
   # When set to true, slices must be referred to by name and not only by a numeric index in order to be used
   # in an Instance's assignment rule. All slices appear in the order in which they are specified in FSH rules.
   # While SUSHI defaults to false for legacy reasons, manualSliceOrding is recommended for new projects.
   manualSliceOrdering: true # true | false
-  # Determines for which types of Instances SUSHI will automatically set meta.profile
-  # if InstanceOf references a profile:
-  #
-  # setMetaProfile: always # always | never | inline-only | standalone-only
-  #
-  #
-  # Determines for which types of Instances SUSHI will automatically set id
-  # if InstanceOf references a profile:
-  #
-  # setId: always # always | standalone-only
+
